@@ -1,10 +1,3 @@
----
-layout: home
-title: "Sougata Panda"
-description: "Academic Webpage"
-mathjax: true
----
-
 <style>
   /* Navigation bar - always in a single line */
   .navbar {
@@ -12,8 +5,8 @@ mathjax: true
     justify-content: center;
     align-items: center;
     background: #00587A;
-    padding: 10px;
-    gap: 10px;
+    padding: 8px;
+    gap: 8px;
   }
 
   .navbar a {
@@ -68,7 +61,7 @@ Welcome to my academic webpage. I am a researcher specializing in [your research
 You can reach me at:
 - Email: `<sougata.panda[at]hotmail[dot]com>`
 - <a href="https://github.com/sougata543" style="text-decoration: none; color: #00587A;">
-    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" width="20" style="vertical-align: middle;"> GitHub Profile</a>
+    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" width="18" style="vertical-align: middle;"> sougata543</a>
 
 
 ## Math Example with MathJax
