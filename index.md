@@ -7,14 +7,13 @@ mathjax: true
 
 <!-- Navigation Bar -->
 <div style="display: flex; justify-content: center; align-items: center; flex-wrap: nowrap; overflow-x: auto; background: #00587A; padding: 10px;">
-  <a href="#about" style="text-decoration: none; color: white; padding: 10px 15px; white-space: nowrap;">About</a>
-  <a href="#research" style="text-decoration: none; color: white; padding: 10px 15px; white-space: nowrap;">Research</a>
-  <a href="#publications" style="text-decoration: none; color: white; padding: 10px 15px; white-space: nowrap;">Publications</a>
-  <a href="#interests" style="text-decoration: none; color: white; padding: 10px 15px; white-space: nowrap;">Interests</a>
-  <a href="#writings" style="text-decoration: none; color: white; padding: 10px 15px; white-space: nowrap;">Writings</a>
-  <a href="#contact" style="text-decoration: none; color: white; padding: 10px 15px; white-space: nowrap;">Contact</a>
+  <a href="#about" style="text-decoration: none; color: white; padding: 8px 10px; white-space: nowrap; flex-shrink: 1;">About</a>
+  <a href="#research" style="text-decoration: none; color: white; padding: 8px 10px; white-space: nowrap; flex-shrink: 1;">Research</a>
+  <a href="#publications" style="text-decoration: none; color: white; padding: 8px 10px; white-space: nowrap; flex-shrink: 1;">Publications</a>
+  <a href="#interests" style="text-decoration: none; color: white; padding: 8px 10px; white-space: nowrap; flex-shrink: 1;">Interests</a>
+  <a href="#writings" style="text-decoration: none; color: white; padding: 8px 10px; white-space: nowrap; flex-shrink: 1;">Writings</a>
+  <a href="#contact" style="text-decoration: none; color: white; padding: 8px 10px; white-space: nowrap; flex-shrink: 1;">Contact</a>
 </div>
-
 # <span class="bengali">সৌগত পণ্ডা</span> (Sougata Panda)
 
 Welcome to my academic webpage. I am a researcher specializing in [your research field]. My work explores [your key research topics], and I am passionate about advancing knowledge in these areas.
