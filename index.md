@@ -5,17 +5,41 @@ description: "Academic Webpage"
 mathjax: true
 ---
 
-<!-- Navigation Bar -->
-<div style="display: flex; justify-content: center; align-items: center; flex-wrap: nowrap; overflow-x: auto; background: #00587A; padding: 10px;">
-  <a href="#about" style="text-decoration: none; color: white; padding: 8px 10px; white-space: nowrap; flex-shrink: 1;">About</a>
-  <a href="#research" style="text-decoration: none; color: white; padding: 8px 10px; white-space: nowrap; flex-shrink: 1;">Research</a>
-  <a href="#publications" style="text-decoration: none; color: white; padding: 8px 10px; white-space: nowrap; flex-shrink: 1;">Publications</a>
-  <a href="#interests" style="text-decoration: none; color: white; padding: 8px 10px; white-space: nowrap; flex-shrink: 1;">Interests</a>
-  <a href="#writings" style="text-decoration: none; color: white; padding: 8px 10px; white-space: nowrap; flex-shrink: 1;">Writings</a>
-  <a href="#contact" style="text-decoration: none; color: white; padding: 8px 10px; white-space: nowrap; flex-shrink: 1;">Contact</a>
-</div>
-# <span class="bengali">সৌগত পণ্ডা</span> (Sougata Panda)
+<style>
+  /* Global hyperlink color */
+  a { color: #00587A !important; text-decoration: none; }
 
+  /* Navigation bar - always in a single line */
+  .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #00587A;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .navbar a {
+    color: white;
+    padding: 5px;
+    white-space: nowrap;
+    font-size: clamp(12px, 2vw, 16px); /* Auto-resize text */
+    flex: 1; /* Distribute space evenly */
+    text-align: center;
+  }
+</style>
+
+<!-- Navigation Bar (No Scrolling, Shrinks Instead) -->
+<div class="navbar">
+  <a href="#about">About</a>
+  <a href="#research">Research</a>
+  <a href="#publications">Publications</a>
+  <a href="#interests">Interests</a>
+  <a href="#writings">Writings</a>
+  <a href="#contact">Contact</a>
+</div>
+
+# <span style="font-family: 'Noto Sans Bengali', sans-serif;">সৌগত পণ্ডা</span> (Sougata Panda)
 Welcome to my academic webpage. I am a researcher specializing in [your research field]. My work explores [your key research topics], and I am passionate about advancing knowledge in these areas.
 
 ## <a id="about"></a> Research Interests
