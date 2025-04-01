@@ -50,12 +50,11 @@ You can reach me at:
 - 🔗 [GitHub Profile](https://github.com/sougatapanda)
 
 ## Math Example with MathJax
-Here is an example of inline math: \( E = mc^2 \)
+Here is an example of inline math: This sentence uses `$` delimiters to show math inline: $\sqrt{3x-1}+(1+x)^2$
+
 
 Here is an example of block math:
-$$
-\sum_{i=1}^{n} i = \frac{n(n+1)}{2}
-$$
+$$\int_{a}^{b} f(x) \, dx$$
 
 <hr>
 
