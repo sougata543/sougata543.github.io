@@ -1,30 +1,55 @@
-# E. P. Hos
+# <span class="bengali">সৌগত পণ্ডা</span> (Sougata Panda)
 
-<!-- Navigation Bar -->
+<!-- Enable MathJax -->
+<script type="text/javascript" async
+  src="https://polyfill.io/v3/polyfill.min.js?features=es6">
+</script>
+<script type="text/javascript" async
+  id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+<!-- Custom Styling -->
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;700&display=swap');
+
+.bengali {
+    font-family: 'Noto Sans Bengali', sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+}
+
 #navbar {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    background: #f8f9fa;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    background: #0077BE; /* Sea Blue */
+    color: white;
     font-family: Arial, sans-serif;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
 }
+
 #navbar a {
-    display: block;
     text-decoration: none;
-    color: #0073e6;
-    padding: 5px 0;
+    color: white;
+    padding: 8px 16px;
 }
+
 #navbar a:hover {
-    text-decoration: underline;
+    background-color: #005f87; /* Darker Blue */
+    border-radius: 5px;
+}
+
+body {
+    margin-top: 50px; /* Space for the nav bar */
 }
 </style>
 
+<!-- Navigation Bar -->
 <div id="navbar">
-    <strong>☰ Menu</strong>
     <a href="#about">About</a>
     <a href="#research">Research</a>
     <a href="#publications">Publications</a>
@@ -57,7 +82,15 @@ I am currently working on:
 - **[Essay/Blog Title 2](#)** – A short description.  
 - **[Essay/Blog Title 3](#)** – A short description.  
 
+## MathJax Example  
+Inline math:  \( E = mc^2 \)  
+
+Block math:
+\[
+\sum_{i=1}^{n} i = \frac{n(n+1)}{2}
+\]
+
 ## <a id="contact"></a> Contact  
-📧 Email: [your.email@example.com]  
+📧 Email: `sougata[dot]panda[at]hotmail[dot]com`  
 🔗 [GitHub Profile](https://github.com/yourusername)  
 🔗 [Other Relevant Link]  
