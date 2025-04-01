@@ -6,9 +6,6 @@ mathjax: true
 ---
 
 <style>
-  /* Global hyperlink color */
-  a { color: #00587A !important; text-decoration: none; }
-
   /* Navigation bar - always in a single line */
   .navbar {
     display: flex;
