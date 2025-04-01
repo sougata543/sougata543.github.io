@@ -6,13 +6,13 @@ mathjax: true
 ---
 
 <!-- Navigation Bar -->
-<div style="background: #0077BE; padding: 15px 0; text-align: center;">
-  <a href="#about" style="text-decoration: none; color: white; padding: 10px 20px;">About</a>
-  <a href="#research" style="text-decoration: none; color: white; padding: 10px 20px;">Research</a>
-  <a href="#publications" style="text-decoration: none; color: white; padding: 10px 20px;">Publications</a>
-  <a href="#interests" style="text-decoration: none; color: white; padding: 10px 20px;">Interests</a>
-  <a href="#writings" style="text-decoration: none; color: white; padding: 10px 20px;">Writings</a>
-  <a href="#contact" style="text-decoration: none; color: white; padding: 10px 20px;">Contact</a>
+<div style="display: flex; justify-content: center; align-items: center; flex-wrap: nowrap; overflow-x: auto; background: #00587A; padding: 10px;">
+  <a href="#about" style="text-decoration: none; color: white; padding: 10px 15px; white-space: nowrap;">About</a>
+  <a href="#research" style="text-decoration: none; color: white; padding: 10px 15px; white-space: nowrap;">Research</a>
+  <a href="#publications" style="text-decoration: none; color: white; padding: 10px 15px; white-space: nowrap;">Publications</a>
+  <a href="#interests" style="text-decoration: none; color: white; padding: 10px 15px; white-space: nowrap;">Interests</a>
+  <a href="#writings" style="text-decoration: none; color: white; padding: 10px 15px; white-space: nowrap;">Writings</a>
+  <a href="#contact" style="text-decoration: none; color: white; padding: 10px 15px; white-space: nowrap;">Contact</a>
 </div>
 
 # <span class="bengali">সৌগত পণ্ডা</span> (Sougata Panda)
@@ -46,8 +46,10 @@ Welcome to my academic webpage. I am a researcher specializing in [your research
 
 ## <a id="contact"></a> Contact
 You can reach me at:
-- 📧 Email: `<sougata.panda[at]hotmail[dot]com>`
-- 🔗 [GitHub Profile](https://github.com/sougatapanda)
+- Email: `<sougata.panda[at]hotmail[dot]com>`
+- <a href="https://github.com/sougata543" style="text-decoration: none; color: #00587A;">
+    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" width="20" style="vertical-align: middle;"> GitHub Profile</a>
+
 
 ## Math Example with MathJax
 Here is an example of inline math: This sentence uses `$` delimiters to show math inline: $\sqrt{3x-1}+(1+x)^2$
@@ -60,5 +62,5 @@ $$\int_{a}^{b} f(x) \, dx$$
 
 <!-- Footer with Copyright -->
 <footer style="text-align: center; padding: 20px; font-size: 14px; background-color: #f4f4f4;">
-    <p>&copy; <script>document.write(new Date().getFullYear());</script> <span class="bengali">সৌগত পণ্ডা</span> (Sougata Panda). All rights reserved.</p>
+    <p>&copy; <script>document.write(new Date().getFullYear());</script> Sougata Panda. All rights reserved.</p>
 </footer>
