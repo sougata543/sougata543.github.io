@@ -8,7 +8,7 @@ title: Home
 I am a second-year MMath student at the [Indian Statistical Institute, Kolkata](https://www.isical.ac.in/).  
 I did my Bachelors in Math and Computer Science at [Chennai Mathematical Institute](https://www.cmi.ac.in/).
 
-Test:
+<!--Test:
 
 Inline: $E = mc^2$ and $\int_0^1 x^2\,dx = \frac13$.
 
@@ -18,11 +18,13 @@ $$
 $$
 
 Inline code in JuliaMono: `x^2 + y^2 = something I dont care`
-
+-->
 ---
 
 ## Contact
 
-- Email:first_name.last_name@outlook.com or sougatap[at]cmi[dot]ac[dot]in  
+- Email:
+    - first_name.last_name@outlook.com 
+    - sougatap[at]cmi[dot]ac[dot]in  
 - GitHub: [sougata543](https://github.com/sougata543)
 
