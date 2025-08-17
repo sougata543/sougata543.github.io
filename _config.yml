@@ -5,18 +5,16 @@ author: "Sougata Panda"
 
 # Build settings
 markdown: kramdown
-theme: none   # we’re using our own css/style.css
 
 # MathJax support
-# (we already added the script in _layouts/default.html)
 mathjax: true
 
-# Optional GitHub Pages plugins (safe ones)
+# Plugins
 plugins:
-  - jekyll-feed   # generates RSS feed (optional)
-  - jekyll-seo-tag # improves SEO metadata
+  - jekyll-feed
+  - jekyll-seo-tag
 
 # URL settings
-url: "sougata543"   # replace with your username
-baseurl: ""   # leave empty for user/organization site
+url: "https://sougata543.github.io"
+baseurl: ""
 
