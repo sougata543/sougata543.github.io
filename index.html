@@ -3,65 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sougata Panda</title>
-  <style>
-    body {
-      font-family: "Georgia", serif;
-      background-color: #ffffff;
-      color: #0a1a40; /* Navy Blue */
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-    }
-    header {
-      background: #0a1a40; /* Navy Blue */
-      color: #fff;
-      padding: 1rem 2rem;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-    }
-    nav {
-      margin-top: 0.5rem;
-    }
-    nav a {
-      color: #fff;
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    main {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-    section {
-      margin-bottom: 3rem;
-    }
-    h2 {
-      color: #0a1a40;
-      border-bottom: 2px solid #0a1a40;
-      padding-bottom: 0.3rem;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: #f4f6fa;
-      font-size: 0.9rem;
-    }
-    a {
-      color: #0a1a40;
-    }
-    a:hover {
-      color: #1c3d7a;
-    }
-  </style>
+  <title>Sougata Panda | সৌগত পণ্ডা</title>
+  <link rel="stylesheet" href="css/style.css">
 
-  <!-- MathJax 3 -->
+  <!-- Bengali font -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali&display=swap" rel="stylesheet">
+
+  <!-- MathJax -->
   <script>
     MathJax = {
       tex: {
@@ -71,18 +19,27 @@
     };
   </script>
   <script id="MathJax-script" async
-    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <style>
+    h1 span.bengali {
+      font-family: 'Noto Serif Bengali', serif;
+      font-size: 1.2em;
+      margin-left: 10px;
+    }
+  </style>
 </head>
 <body>
 
   <header>
-    <h1>Sougata Panda</h1>
+    <h1>Sougata Panda <span class="bengali">সৌগত পণ্ডা</span></h1>
     <p>Master’s Student in Mathematics, ISI Kolkata</p>
     <nav>
-      <a href="#research">Research</a>
-      <a href="#teaching">Teaching</a>
-      <a href="#cv">CV</a>
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="mmath.html">MMath Archive</a>
+      <a href="other.html">Other Interests</a>
+      <a href="cv.pdf" target="_blank">CV</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
@@ -94,7 +51,7 @@
         I am a second-year MMath student at the 
         <a href="https://www.isical.ac.in/" target="_blank">Indian Statistical Institute, Kolkata</a>. 
         I did my Bachelors in Math and Computer Science from  
-        <a href="https://www.cmi.ac.in/" target="_blank">Chennai Mathematical Institute</a>  
+        <a href="https://www.cmi.ac.in/" target="_blank">Chennai Mathematical Institute</a>.
       </p>
       <p>
         Example math: The quadratic formula is 
@@ -102,26 +59,9 @@
       </p>
     </section>
 
-    <section id="research">
-      <h2>Research</h2>
-      <p>
-        I am particularly interested in staying Alive...
-      </p>
-    </section>
-
-    <section id="teaching">
-      <h2>Course Archive from MMath</h2>
-      <p> Have to search all the things...</p>
-    </section>
-
-    <section id="cv">
-      <h2>Curriculum Vitae</h2>
-      <p>You can download my CV  <a href="cv.pdf" target="_blank">here</a>, if this link is broken then som am I... </p>
-    </section>
-
     <section id="contact">
       <h2>Contact</h2>
-      <p>Email: <a href="mailto:sougata.panda@outlook.com">sougata[dot]panda[at]outlook[dot]com</a></p>
+      <p>Email: <a href="mailto:sougata.panda@outlook.com">sougata.panda@outlook.com</a></p>
       <p>GitHub: <a href="https://github.com/sougata543" target="_blank">github.com/sougata543</a></p>
     </section>
   </main>
@@ -132,3 +72,4 @@
 
 </body>
 </html>
+
