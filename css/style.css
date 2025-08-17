@@ -10,7 +10,7 @@ body {
   background-image: url("../images/esum.gif"), url("../images/esum.gif");
   background-repeat: repeat-y, repeat-y;
   background-position: left top, right top;
-  background-size: 80px;
+  background-size: 200px auto;
 }
 
 header {
