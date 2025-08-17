@@ -1,0 +1,122 @@
+@font-face {
+  font-family: 'JuliaMono';
+  src: url('../fonts/JuliaMono-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'JuliaMono';
+  src: url('../fonts/JuliaMono-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'JuliaMono';
+  src: url('../fonts/JuliaMono-RegularItalic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+}
+
+main {
+  padding: 2rem;
+}
+
+body {
+  font-family: 'Merriweather', 'Noto Serif Bengali', serif;
+  background: #fff;
+  color: #0a1a40;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+h1 .bengali {
+  font-family: 'Noto Serif Bengali', serif;
+}
+
+code, pre, kbd, samp {
+  font-family: 'JuliaMono', monospace;
+  font-size: 0.95em;
+  background: #f4f6fa;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+/* Two-column layout */
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Left column */
+.sidebar {
+  flex: 1;
+  max-width: 250px;
+  background: #f7f9fc;
+  padding: 1rem;
+  text-align: center;
+  border-right: 1px solid #ddd;
+}
+
+.profile-pic {
+  width: 100%;
+  max-width: 180px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+blockquote {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+/* Right column */
+.content {
+  flex: 3;
+  padding: 2rem;
+}
+
+/* Header */
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+header h1 .bengali {
+  font-family: 'Noto Serif Bengali', serif;
+  font-size: 0.8em;
+  margin-left: 6px;
+}
+nav {
+  margin-top: 0.5rem;
+}
+nav a {
+  margin-right: 1rem;
+  text-decoration: none;
+  color: #0a1a40;
+  font-weight: bold;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  margin-top: 3rem;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .sidebar {
+    max-width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+}
+

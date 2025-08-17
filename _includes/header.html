@@ -5,6 +5,19 @@
     <a href="{{ '/research.html' | relative_url }}">Research and Writings</a>
     <a href="{{ '/mmath.html' | relative_url }}">Archive</a>
     <a href="{{ '/other.html' | relative_url }}">Others</a>
+    <button id="dark-toggle" style="float:right;">🌙</button>
   </nav>
 </header>
+
+<script>
+  const toggle = document.getElementById('dark-toggle');
+  toggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    localStorage.setItem('darkMode', document.body.classList.contains('dark'));
+  });
+  // Persist dark mode on reload
+  if (localStorage.getItem('darkMode') === 'true') {
+    document.body.classList.add('dark');
+  }
+</script>
 

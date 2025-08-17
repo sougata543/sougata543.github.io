@@ -1,50 +1,92 @@
-main {
-  padding: 2rem;
+/* ===========================
+   Fonts
+   =========================== */
+@font-face {
+  font-family: 'JuliaMono';
+  src: url('../fonts/JuliaMono-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
 }
+@font-face {
+  font-family: 'JuliaMono';
+  src: url('../fonts/JuliaMono-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'JuliaMono';
+  src: url('../fonts/JuliaMono-RegularItalic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: Georgia, serif;
+  font-family: 'Merriweather', 'Noto Serif Bengali', serif;
   background: #fff;
   color: #0a1a40;
+  line-height: 1.65;
 }
 
-/* Two-column layout */
+/* ===========================
+   Layout
+   =========================== */
 .container {
   display: flex;
   min-height: 100vh;
+  max-width: 1200px;
+  margin: auto;
 }
 
-/* Left column */
+/* Sidebar */
 .sidebar {
   flex: 1;
   max-width: 250px;
   background: #f7f9fc;
-  padding: 1rem;
+  padding: 1.5rem;
   text-align: center;
   border-right: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
 }
-
 .profile-pic {
   width: 100%;
   max-width: 180px;
   border-radius: 50%;
   margin-bottom: 1rem;
 }
-
 blockquote {
   font-style: italic;
   font-size: 0.9rem;
   color: #444;
+  margin: 1rem 0 0;
 }
 
-/* Right column */
+/* Content */
 .content {
   flex: 3;
   padding: 2rem;
+  max-width: 900px;
+  margin: auto;
 }
 
-/* Header */
+
+/* mjx-mtext[mathvariant="monospace"] {
+  font-family: 'JuliaMono', monospace !important;
+}*/
+
+mjx-math, mjx-container {
+  font-family: inherit !important;
+}
+
+
+
+/* ===========================
+   Header + Nav
+   =========================== */
 header h1 {
   margin: 0;
   font-size: 1.8rem;
@@ -55,34 +97,94 @@ header h1 .bengali {
   margin-left: 6px;
 }
 nav {
-  margin-top: 0.5rem;
+  margin-top: 0.8rem;
 }
 nav a {
   margin-right: 1rem;
   text-decoration: none;
   color: #0a1a40;
   font-weight: bold;
+  position: relative;
 }
 nav a:hover {
-  text-decoration: underline;
+  color: #1c3d7a;
+}
+nav a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background: #0a1a40;
+  width: 0%;
+  transition: width 0.3s;
+  margin-top: 2px;
+}
+nav a:hover::after {
+  width: 100%;
+}
+/* Active nav link */
+nav a.active {
+  color: #1c3d7a;
+}
+nav a.active::after {
+  width: 100%;
+  background: #1c3d7a;
 }
 
-/* Footer */
+/* ===========================
+   Main Content
+   =========================== */
+main {
+  margin-top: 2rem;
+}
+h2 {
+  border-bottom: 2px solid #0a1a40;
+  padding-bottom: 0.3rem;
+  margin-top: 2rem;
+}
+
+/* ===========================
+   Code & Pre
+   =========================== */
+code, pre, kbd, samp {
+  font-family: 'JuliaMono', monospace;
+  font-size: 0.95em;
+  background: #f4f6fa;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+pre {
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+/* ===========================
+   Footer
+   =========================== */
 footer {
   margin-top: 3rem;
   font-size: 0.85rem;
   color: #666;
 }
 
-/* Responsive: stack on small screens */
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-  }
-  .sidebar {
-    max-width: 100%;
-    border-right: none;
-    border-bottom: 1px solid #ddd;
-  }
+/* ===========================
+   Dark Mode
+   =========================== */
+body.dark {
+  background: #0a1a40;
+  color: #f4f4f4;
+}
+body.dark .sidebar {
+  background: #121a30;
+  border-right: 1px solid #333;
+}
+body.dark nav a {
+  color: #ddd;
+}
+body.dark nav a:hover {
+  color: #fff;
+}
+body.dark code, body.dark pre {
+  background: #222;
+  color: #eee;
 }
 

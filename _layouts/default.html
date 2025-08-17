@@ -12,20 +12,32 @@
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}">
-
+ <!-- Juliamono-preload-->
+    <link rel="preload" href="{{ '/fonts/JuliaMono-Regular.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ '/fonts/JuliaMono-Bold.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ '/fonts/JuliaMono-RegularItalic.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Noto+Serif+Bengali&display=swap" rel="stylesheet">
   <!-- Bengali font -->
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali&display=swap" rel="stylesheet">
 
   <!-- MathJax -->
-  <script>
-    MathJax = {
-      tex: {
-        inlineMath: [["$", "$"], ["\\(", "\\)"]],
-        displayMath: [["$$", "$$"], ["\\[", "\\]"]]
-      }
-    };
-  </script>
   <script id="MathJax-script" async
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [["$", "$"], ["\\(", "\\)"]],
+      displayMath: [["$$", "$$"], ["\\[", "\\]"]],
+      packages: {'[+]': ['textmacros']}  // support for \texttt
+    },
+    chtml: {
+      // Override font for monospace
+      fontURL: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/output/chtml/fonts/woff-v2',
+      mtextInheritFont: true
+    }
+  };
+</script>
     src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
