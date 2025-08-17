@@ -1,0 +1,22 @@
+# Site settings
+title: "Sougata Panda | সৌগত পণ্ডা"
+description: "Academic Page, ISI Kolkata"
+author: "Sougata Panda"
+
+# Build settings
+markdown: kramdown
+theme: none   # we’re using our own css/style.css
+
+# MathJax support
+# (we already added the script in _layouts/default.html)
+mathjax: true
+
+# Optional GitHub Pages plugins (safe ones)
+plugins:
+  - jekyll-feed   # generates RSS feed (optional)
+  - jekyll-seo-tag # improves SEO metadata
+
+# URL settings
+url: "sougata543"   # replace with your username
+baseurl: ""   # leave empty for user/organization site
+
