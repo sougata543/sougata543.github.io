@@ -10,8 +10,14 @@ I did my Bachelors in Math and Computer Science at [Chennai Mathematical Institu
 
 Test:
 
-$ \texttt{E = mc^2} \quad \text{vs} \quad E = mc^2 $
+Inline: $E = mc^2$ and $\int_0^1 x^2\,dx = \frac13$.
 
+Display:
+$$
+\sum_{n=1}^\infty \frac{1}{n^2} = \frac{\pi^2}{6}
+$$
+
+Inline code in JuliaMono: `x^2 + y^2`
 ---
 
 ## Contact
