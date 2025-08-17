@@ -12,6 +12,6 @@ I did my Bachelors in Math and Computer Science at [Chennai Mathematical Institu
 
 ## Contact
 
-- Email:<first_name>.<last_name>@outlook.com or sougatap[at]cmi[dot]ac[dot]in  
+- Email:first_name.last_name@outlook.com or sougatap[at]cmi[dot]ac[dot]in  
 - GitHub: [github.com/sougata543](https://github.com/sougata543)
 
