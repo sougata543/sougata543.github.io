@@ -17,7 +17,8 @@ $$
 \sum_{n=1}^\infty \frac{1}{n^2} = \frac{\pi^2}{6}
 $$
 
-Inline code in JuliaMono: `x^2 + y^2`
+Inline code in JuliaMono: `x^2 + y^2 = something I dont care`
+
 ---
 
 ## Contact
