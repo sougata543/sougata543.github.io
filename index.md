@@ -2,11 +2,11 @@
 layout: default
 title: Home
 ---
-
 <style>
+/* Dimmed repeating spiral only on index page */
 main::before {
     content: '';
-    position: absolute;
+    position: fixed;          /* stays in place */
     top: 0;
     left: 0;
     width: 100%;
@@ -15,13 +15,14 @@ main::before {
     background-repeat: repeat;
     background-size: auto;
     background-position: 0 0;
-    pointer-events: none;
+    pointer-events: none;     /* allow interaction */
     z-index: 0;
+    opacity: 0.1;             /* dim the spiral */
 }
 
 main > * {
     position: relative;
-    z-index: 1;
+    z-index: 1;               /* content above spiral */
 }
 </style>
 
