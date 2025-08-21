@@ -162,14 +162,7 @@ footer {
   border-bottom-color: #333;
 }
 
-
-
-/* Main content background */
-main {
-    background-color: #fff; /* pure white background */
-    position: relative;
-    padding: 2rem;
-}
+{% if page.index_page %}
 
 main::before {
     content: '';
@@ -191,15 +184,4 @@ main > * {
     position: relative;
     z-index: 1;
 }
-
-/* JuliaMono code blocks readable */
-pre, code, kbd, samp {
-    font-family: 'JuliaMono', monospace;
-    font-size: 0.95em;
-    background: #f4f6fa; /* solid background for code */
-    padding: 8px 10px;
-    border-radius: 6px;
-    overflow-x: auto;
-    position: relative;
-    z-index: 2;
-}
+{% endif %}

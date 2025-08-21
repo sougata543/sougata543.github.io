@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Home
+index_page: true
 ---
 
 ## About Me
