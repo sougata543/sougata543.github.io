@@ -171,20 +171,18 @@ main {
     padding: 2rem;
 }
 
-/* Dimmed spiral background using brightness */
 main::before {
     content: '';
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    transform: translate(-50%, -50%);
     background-image: url('../images/background_spiral_1.png'); /* spiral image */
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    pointer-events: none;      /* allow content interaction */
+    background-repeat: repeat;           /* repeat the image */
+    background-size: auto;               /* keep original image size */
+    background-position: 0 0;            /* start at top-left */
+    pointer-events: none;                /* allow content interaction */
     z-index: 0;
 }
 
