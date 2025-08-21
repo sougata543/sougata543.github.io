@@ -11,7 +11,7 @@ main::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('../images/background_spiral_1.png');
+    background-image: url('images/background_spiral_1.png');
     background-repeat: repeat;
     background-size: auto;
     background-position: 0 0;
