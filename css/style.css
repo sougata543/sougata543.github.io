@@ -73,23 +73,6 @@ code, pre, kbd, samp {
 }
 
 
-.caption {
-  font-size: 0.65rem;
-  color: #777;
-  line-height: 1.2;
-  margin-top: 1rem;
-  font-style: italic;
-  opacity: 0.8;
-}
-.caption a {
-  color: #555;
-  text-decoration: none;
-  border-bottom: 1px dotted #555;
-}
-.caption a:hover {
-  color: #0a1a40;
-}
-
 blockquote {
   font-style: italic;
   font-size: 0.9rem;
