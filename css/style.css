@@ -162,6 +162,8 @@ footer {
   border-bottom-color: #333;
 }
 
+
+
 /* Main content background */
 main {
     background-color: #fff; /* pure white background */
@@ -169,7 +171,7 @@ main {
     padding: 2rem;
 }
 
-/* Dimmed spiral background */
+/* Dimmed spiral background using brightness */
 main::before {
     content: '';
     position: absolute;
@@ -178,16 +180,16 @@ main::before {
     width: 100%;
     height: 100%;
     transform: translate(-50%, -50%);
-    background-image: url('../images/background_spiral.png'); /* your spiral image */
-    background-size: contain;   /* maintain image proportion */
+    background-image: url('../images/background_spiral.png'); /* spiral image */
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    opacity: 0.15;              /* dim the spiral */
-    pointer-events: none;       /* allow interaction with content */
+    filter: brightness(0.15);  /* dim only the image */
+    pointer-events: none;      /* allow content interaction */
     z-index: 0;
 }
 
-/* Ensure main content is above the spiral */
+/* Main content sits above the spiral */
 main > * {
     position: relative;
     z-index: 1;
@@ -197,7 +199,7 @@ main > * {
 pre, code, kbd, samp {
     font-family: 'JuliaMono', monospace;
     font-size: 0.95em;
-    background: #f4f6fa; /* solid light background for code */
+    background: #f4f6fa; /* solid background for code */
     padding: 8px 10px;
     border-radius: 6px;
     overflow-x: auto;
