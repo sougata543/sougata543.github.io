@@ -15,9 +15,7 @@ Can you guess the values of `dd`, `mm`, and `yyyy` hidden inside the function?
 <!-- Image scales with page width while keeping aspect ratio -->
 <img src="images/bd_25000.png" style="width:100%; max-width:800px; height:auto;" alt="Exponential Sum Spiral">
 
-> **Note:** The Python code below to generate this spiral was written by ChatGPT.
-
-```python
+`
 # Python code written by ChatGPT to generate this spiral
 import numpy as np
 import matplotlib.pyplot as plt
@@ -40,7 +38,7 @@ for n in range(1, N+1):
 bg_color = (220/255, 218/255, 210/255)
 line_color = (120/255, 120/255, 120/255)
 
-fig, ax = plt.subplots(figsize=(8,8), dpi=300)
+fig, ax = plt.subplots(figsize=(8,8), dpi=800)
 fig.patch.set_facecolor(bg_color)
 ax.set_facecolor(bg_color)
 ax.plot(S_real, S_imag, color=line_color, linewidth=0.5)
@@ -48,4 +46,4 @@ ax.plot(S_real, S_imag, color=line_color, linewidth=0.5)
 ax.axis('off')
 ax.set_aspect('equal')
 plt.savefig("bd_25000.png", dpi=300, bbox_inches='tight', pad_inches=0, facecolor=bg_color)
-plt.show()
+plt.show()`
