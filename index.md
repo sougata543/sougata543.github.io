@@ -1,8 +1,29 @@
 ---
 layout: default
 title: Home
-index_page: true
 ---
+
+<style>
+main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/background_spiral_1.png');
+    background-repeat: repeat;
+    background-size: auto;
+    background-position: 0 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+main > * {
+    position: relative;
+    z-index: 1;
+}
+</style>
 
 ## About Me
 

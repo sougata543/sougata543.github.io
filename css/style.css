@@ -161,27 +161,3 @@ footer {
   color: #333;            /* darker on hover */
   border-bottom-color: #333;
 }
-
-{% if page.index_page %}
-
-main::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('../images/background_spiral_1.png'); /* spiral image */
-    background-repeat: repeat;           /* repeat the image */
-    background-size: auto;               /* keep original image size */
-    background-position: 0 0;            /* start at top-left */
-    pointer-events: none;                /* allow content interaction */
-    z-index: 0;
-}
-
-/* Main content sits above the spiral */
-main > * {
-    position: relative;
-    z-index: 1;
-}
-{% endif %}
