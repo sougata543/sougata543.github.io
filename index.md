@@ -2,29 +2,6 @@
 layout: default
 title: Home
 ---
-<style>
-/* Dimmed repeating spiral only on index page */
-main::before {
-    content: '';
-    position: fixed;          /* stays in place */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('images/background_spiral_1.png');
-    background-repeat: repeat;
-    background-size: auto;
-    background-position: 0 0;
-    pointer-events: none;     /* allow interaction */
-    z-index: 0;
-    opacity: 0.1;             /* dim the spiral */
-}
-
-main > * {
-    position: relative;
-    z-index: 1;               /* content above spiral */
-}
-</style>
 
 ## About Me
 
