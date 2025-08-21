@@ -38,6 +38,21 @@
 <script id="MathJax-script" async
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
+<!-- Image shuffling -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const pics = [
+      "images/p1.gif",
+      "images/p2.png",
+      "images/p3.png"
+    ];
+    const randomPic = pics[Math.floor(Math.random() * pics.length)];
+    document.getElementById("sidebar-pic").src = randomPic;
+  });
+</script>
+
+
 </head>
 <body>
   <div class="container">
