@@ -40,18 +40,31 @@
 
 <!-- Image shuffling -->
 
+
 <script>
   document.addEventListener("DOMContentLoaded", function() {
     const pics = [
-      "images/p1.gif",
-      "images/p2.png",
-      "images/p3.png"
+      {
+        src: "images/p1.gif",
+          caption: "Here $f(n)=n^{3/2}/5$, I got it from Noam Elkies's page, here's the 
+          <a href="https://people.math.harvard.edu/~elkies/M259.02/whorls.html"> link </a>."
+      },
+      {
+        src: "images/p4.png",
+        caption: 'Here $f(n)=n/11 + n^2/21 + n^3/31$'
+      },
+      {
+        src: "images/p3.png",
+          caption: 'Here $f(n)=(\ln{n})^4$'
+      }
     ];
-    const randomPic = pics[Math.floor(Math.random() * pics.length)];
-    document.getElementById("sidebar-pic").src = randomPic;
+
+    // Pick random picture + caption
+    const choice = pics[Math.floor(Math.random() * pics.length)];
+    document.getElementById("sidebar-pic").src = choice.src;
+    document.getElementById("sidebar-caption").innerHTML = choice.caption;
   });
 </script>
-
 
 </head>
 <body>
