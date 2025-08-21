@@ -161,3 +161,46 @@ footer {
   color: #333;            /* darker on hover */
   border-bottom-color: #333;
 }
+
+
+
+/* Main content background */
+main {
+    background-image: url('../images/background_spiral.png'); /* Update path if needed */
+    background-size: cover;      /* cover entire area */
+    background-position: center; /* center the image */
+    background-repeat: no-repeat;
+    min-height: 100vh;           /* full viewport height */
+    width: 100%;
+    padding: 2rem;
+    position: relative;          /* for overlay */
+}
+
+/* Optional semi-transparent overlay for readability */
+main::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3); /* dark overlay, 30% opacity */
+    z-index: 0;
+}
+
+/* Ensure main content is above overlay */
+main > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* JuliaMono code blocks readable on background */
+pre, code, kbd, samp {
+    font-family: 'JuliaMono', monospace;
+    font-size: 0.95em;
+    background: rgba(244,246,250,0.9); /* slightly transparent white */
+    padding: 8px 10px;
+    border-radius: 6px;
+    overflow-x: auto;
+    position: relative;
+    z-index: 2;
+}
