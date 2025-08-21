@@ -36,13 +36,26 @@ h1 .bengali {
   font-family: 'Noto Serif Bengali', serif;
 }
 
-code, pre, kbd, samp {
-  font-family: 'JuliaMono', monospace;
-  font-size: 0.95em;
-  background: #f4f6fa;
-  padding: 2px 4px;
-  border-radius: 4px;
+/* Inline code */
+code, kbd, samp {
+    font-family: 'JuliaMono', monospace;
+    font-size: 0.95em;
+    background: #f4f6fa;
+    padding: 2px 4px;
+    border-radius: 4px;
 }
+
+/* Fenced code blocks */
+
+pre {
+    font-family: 'JuliaMono', monospace;
+    font-size: 0.95em;
+    background: #f4f6fa;
+    padding: 10px 12px;
+    border-radius: 6px;
+    overflow-x: auto;
+}
+
 /* Two-column layout */
 .container {
   display: flex;
