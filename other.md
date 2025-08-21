@@ -15,6 +15,7 @@ Can you guess the values of `dd`, `mm`, and `yyyy` hidden inside the function?
 <!-- Image scales with page width while keeping aspect ratio -->
 <img src="images/bd_25000.png" style="width:100%; max-width:800px; height:auto;" alt="Exponential Sum Spiral">
 
+
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -50,3 +51,4 @@ ax.set_aspect('equal')
 
 plt.savefig("bd_25000.png", dpi=300, bbox_inches='tight', pad_inches=0, facecolor=bg_color)
 plt.show()
+```
