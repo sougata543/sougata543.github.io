@@ -10,10 +10,10 @@ $$
 f(n) = \frac{n}{dd} + \frac{n^2}{mm} + \frac{n^3}{yyyy}
 $$
 
-Can you guess the values of `dd`, `mm`, and `yyyy` hidden inside the function?
+Can you guess the values of dd, mm, and yyyy hidden inside the function?
 
 <!-- Image scales with page width while keeping aspect ratio -->
-<img src="images/bd_25000.png" style="width:100%; max-width:800px; height:auto;" alt="Exponential Sum Spiral">
+<img src="images/sample_true.png" style="width:60%; max-width:800px; height:auto;" alt="Exponential Sum Spiral">
 
 
 ```python
@@ -38,7 +38,7 @@ for n in range(1, N+1):
     S_imag[n-1] = S.imag
 
 # Plot settings
-bg_color = (220/255, 218/255, 210/255)
+bg_color = (1, 1, 1)
 line_color = (120/255, 120/255, 120/255)
 
 fig, ax = plt.subplots(figsize=(8,8), dpi=800)
