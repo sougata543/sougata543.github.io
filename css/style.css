@@ -159,7 +159,7 @@ nav a {
   font-weight: bold;
 }
 nav a:hover { text-decoration: underline; color: var(--main-link-hover); }
-nav a:visited { color: var(--sidebar-highlight); }
+nav a:visited { color: var(--main-link-visited); }
 
 /* ================================
    TEXT ELEMENTS
