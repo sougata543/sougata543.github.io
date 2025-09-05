@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <title>{{ page.title }} | {{ site.title }}</title>-->
- <title>{{ page.title }}</title>
+  <title>{{ page.title }}</title>
 
   <!-- SEO & Social Metadata -->
   {% seo %}
@@ -12,40 +11,51 @@
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}">
- <!-- Juliamono-preload-->
-    <link rel="preload" href="{{ '/fonts/JuliaMono-Regular.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="{{ '/fonts/JuliaMono-Bold.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="{{ '/fonts/JuliaMono-RegularItalic.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
-  
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Noto+Serif+Bengali&display=swap" rel="stylesheet">
 
-    <!-- importing IBM Plex Sans -->
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Preload JuliaMono -->
+  <link rel="preload" href="{{ '/fonts/JuliaMono-Regular.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ '/fonts/JuliaMono-Bold.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ '/fonts/JuliaMono-RegularItalic.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
 
-    <!-- Bengali font -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Noto+Serif+Bengali&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Material Symbols (for theme toggle icon) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=contrast" />
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+    }
+  </style>
 
   <!-- MathJax -->
-<script>
-  window.MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']],
-      displayMath: [['$$', '$$'], ['\\[', '\\]']]
-    },
-    options: {
-      // don’t try to typeset inside code blocks
-      skipHtmlTags: ['script','noscript','style','textarea','pre','code']
-    }
-  };
-</script>
-<script id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      },
+      options: {
+        skipHtmlTags: ['script','noscript','style','textarea','pre','code']
+      }
+    };
+  </script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
   <div class="container">
     {% include sidebar.html %}
+
+    <!-- Theme toggle button (inside sidebar, after content gets included) -->
+    <button id="theme-toggle" class="theme-btn">
+      <span class="material-symbols-outlined">contrast</span>
+    </button>
+
     <div class="content">
       {% include header.html %}
 
@@ -56,6 +66,29 @@
       {% include footer.html %}
     </div>
   </div>
+
+  <!-- Theme toggle script -->
+  <script>
+    function getPreferredTheme() {
+      const stored = localStorage.getItem("theme");
+      if (stored) return stored;
+      return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+
+    function setTheme(theme) {
+      document.body.classList.remove("light", "dark");
+      document.body.classList.add(theme);
+      localStorage.setItem("theme", theme);
+    }
+
+    // Initialize theme
+    setTheme(getPreferredTheme());
+
+    // Toggle on button click
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+      const isDark = document.body.classList.contains("dark");
+      setTheme(isDark ? "light" : "dark");
+    });
+  </script>
 </body>
 </html>
-
