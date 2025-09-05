@@ -34,21 +34,22 @@
   --main-divider: #aaaaaa;
   --main-link: #2255aa;
   --main-link-hover: #aa5522;
+  --main-link-visited: #663399; /* subtle purple for light mode visited */
 }
 
 .dark {
-  --body-bg: #1d1f21;       /* deep gray, softer than pure black */
-  --body-text: #c9d1d9;     /* light gray for readability */
-  --sidebar-bg: #24292f;    /* dark sidebar background */
-  --sidebar-text: #8b949e;  /* muted gray for sidebar text */
+  --body-bg: #1d1f21;       /* deep gray */
+  --body-text: #c9d1d9;     /* light gray */
+  --sidebar-bg: #24292f;    /* dark sidebar */
+  --sidebar-text: #8b949e;  /* muted gray */
   --sidebar-highlight: #ffffff; 
   --header-bg: #2d333b;     /* darker header bar */
   --main-divider: #30363d;
 
-  /* Links */
-  --main-link: #58a6ff;         /* GitHub-like blue */
-  --main-link-hover: #79c0ff;   /* lighter blue on hover */
-  --main-link-visited: #a5d6ff; /* softer blue for visited links */
+  /* Links (GitHub-inspired) */
+  --main-link: #58a6ff;
+  --main-link-hover: #79c0ff;
+  --main-link-visited: #a5d6ff;
 }
 
 /* ================================
@@ -56,12 +57,14 @@
 ==================================*/
 body {
   font-family: 'Merriweather', 'Noto Serif Bengali', serif;
-  font-weight: 300; /* lighter base */
+  font-weight: 300;
   background: var(--body-bg);
   color: var(--body-text);
   margin: 0;
   padding: 0;
   line-height: 1.6;
+
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 main { padding: 2rem; }
@@ -69,6 +72,25 @@ main { padding: 2rem; }
 .container {
   display: flex;
   min-height: 100vh;
+}
+
+/* ================================
+   LINKS
+==================================*/
+a,
+a:link {
+  color: var(--main-link);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--main-link-hover);
+  text-decoration: underline;
+}
+
+a:visited {
+  color: var(--main-link-visited);
 }
 
 /* ================================
@@ -83,13 +105,15 @@ main { padding: 2rem; }
   text-align: center;
   border-right: 1px solid var(--main-divider);
 
-  display: flex;               /* make it a flex container */
-  flex-direction: column;      /* stack content vertically */
-  justify-content: space-between; /* push button to bottom */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .sidebar-content {
-  flex: 1 1 auto; /* ensures content takes available space */
+  flex: 1 1 auto;
 }
 
 .profile-pic {
@@ -154,12 +178,8 @@ header h1 .bengali {
 nav { margin-top: 0.5rem; }
 nav a {
   margin-right: 1rem;
-  text-decoration: none;
-  color: var(--main-link);
   font-weight: bold;
 }
-nav a:hover { text-decoration: underline; color: var(--main-link-hover); }
-nav a:visited { color: var(--main-link-visited); }
 
 /* ================================
    TEXT ELEMENTS
@@ -182,12 +202,9 @@ blockquote {
   margin-bottom: 1rem;
 }
 .caption a {
-  color: var(--main-link);
-  text-decoration: none;
   border-bottom: 1px dotted var(--main-divider);
 }
 .caption a:hover {
-  color: var(--main-link-hover);
   border-bottom-color: var(--main-link-hover);
 }
 
