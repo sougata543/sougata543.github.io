@@ -37,15 +37,18 @@
 }
 
 .dark {
-  --body-bg: #131313;
-  --body-text: #bbbbbb;
-  --sidebar-bg: #222222;
-  --sidebar-text: #999999;
-  --sidebar-highlight: #eeeeee;
-  --header-bg: #2a2a2a;
-   --main-link: #4da6ff;
-  --main-link-hover: #66ccff; 
-  --main-divider: #555555;
+  --body-bg: #1d1f21;       /* deep gray, softer than pure black */
+  --body-text: #c9d1d9;     /* light gray for readability */
+  --sidebar-bg: #24292f;    /* dark sidebar background */
+  --sidebar-text: #8b949e;  /* muted gray for sidebar text */
+  --sidebar-highlight: #ffffff; 
+  --header-bg: #2d333b;     /* darker header bar */
+  --main-divider: #30363d;
+
+  /* Links */
+  --main-link: #58a6ff;         /* GitHub-like blue */
+  --main-link-hover: #79c0ff;   /* lighter blue on hover */
+  --main-link-visited: #a5d6ff; /* softer blue for visited links */
 }
 
 /* ================================
@@ -53,6 +56,7 @@
 ==================================*/
 body {
   font-family: 'Merriweather', 'Noto Serif Bengali', serif;
+  font-weight: 300; /* lighter base */
   background: var(--body-bg);
   color: var(--body-text);
   margin: 0;
