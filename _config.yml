@@ -1,46 +1,20 @@
+# Site settings
 title: "Sougata Panda | সৌগত পণ্ডা"
 description: "Academic Page, ISI Kolkata"
-url: "https://sougata543.github.io"
-baseurl: ""
+author: "Sougata Panda"
 
-author:
-  name: "Sougata Panda"
-  bio: "Graduate Student, ISI Kolkata"
-  location: "Kolkata, India"
-  email: "your_email@example.com"
-  github: sougata543
+# Build settings
+markdown: kramdown
 
-remote_theme: cotes2020/jekyll-theme-chirpy
+# MathJax support
+mathjax: true
 
+# Plugins
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-remote-theme
 
-mathjax: true
-lang: en
-timezone: Asia/Kolkata
+# URL settings
+url: "https://sougata543.github.io"
+baseurl: ""
 
-avatar: /assets/img/profile.jpg
-
-social:
-  github: sougata543
-
-assets:
-  css: 
-    - /assets/css/custom.css
-nav:
-  - title: "Home"
-    url: /
-  - title: "Writings"
-    url: /writings/
-  - title: "Archive"
-    url: /archive/
-  - title: "CV"
-    url: /cv/
-  - title: "Contact"
-    url: /contact/
-
-feed:
-  path: feed.xml
-markdown: kramdown
