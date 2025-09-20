@@ -34,7 +34,7 @@
   --main-divider: #aaaaaa;
   --main-link: #880808;
   --main-link-hover: #aa5522;
-  /*--main-link-visited: #663399;*/ /* subtle purple for light mode visited */
+  --main-link-visited: #663399; /* subtle purple for light mode visited */
 }
 
 .dark {
