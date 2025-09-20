@@ -25,9 +25,9 @@
 ==================================*/
 :root,
 .light {
-  --body-bg: #eeeeee;
+  --body-bg: #FFFFFF;
   --body-text: #333333;
-  --sidebar-bg: #dddddd;
+  --sidebar-bg: #EDEADE;
   --sidebar-text: #666666;
   --sidebar-highlight: #111111;
   --header-bg: #d5d5d5;
