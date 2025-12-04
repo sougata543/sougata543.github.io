@@ -1,0 +1,245 @@
+@font-face {
+  font-family: 'JuliaMono';
+  src: url('../fonts/JuliaMono-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'JuliaMono';
+  src: url('../fonts/JuliaMono-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'JuliaMono';
+  src: url('../fonts/JuliaMono-RegularItalic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ================================
+   LIGHT THEME VARIABLES (ONLY)
+==================================*/
+:root {
+  --body-bg: #FFFFFF;
+  --body-text: #333333;
+  --sidebar-bg: #EDEADE;
+  --sidebar-text: #666666;
+  --sidebar-highlight: #111111;
+  --header-bg: #d5d5d5;
+  --main-divider: #aaaaaa;
+  --main-link: #880808;
+  --main-link-hover: #aa5522;
+  --main-link-visited: #663399; /* subtle purple for visited links */
+}
+
+/* ================================
+   BASE LAYOUT
+==================================*/
+body {
+  font-family: 'Merriweather', 'Noto Serif Bengali', serif;
+  font-weight: 300;
+  background: var(--body-bg);
+  color: var(--body-text);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+main {
+  padding: 2rem;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ================================
+   LINKS
+==================================*/
+a,
+a:link {
+  color: var(--main-link);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--main-link-hover);
+  text-decoration: underline;
+}
+
+a:visited {
+  color: var(--main-link-visited);
+}
+
+/* ================================
+   SIDEBAR
+==================================*/
+.sidebar {
+  flex: 1;
+  max-width: 250px;
+  background: var(--sidebar-bg);
+  color: var(--sidebar-text);
+  padding: 1rem;
+  text-align: center;
+  border-right: 1px solid var(--main-divider);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar-content {
+  flex: 1 1 auto;
+}
+
+.profile-pic {
+  width: 100%;
+  max-width: 180px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  opacity: 0.8;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.profile-pic:hover {
+  opacity: 1;
+}
+
+/* ================================
+   MAIN CONTENT
+==================================*/
+.content {
+  flex: 3;
+  padding: 2rem;
+}
+
+h1 .bengali {
+  font-family: 'Noto Serif Bengali', serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'IBM Plex Sans', Arial, sans-serif;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+header h1 .bengali {
+  font-size: 0.8em;
+  margin-left: 6px;
+}
+
+nav {
+  margin-top: 0.5rem;
+}
+
+nav a {
+  margin-right: 1rem;
+  font-weight: bold;
+}
+
+/* ================================
+   TEXT ELEMENTS
+==================================*/
+blockquote {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--sidebar-text);
+  border-left: 3px solid var(--main-divider);
+  padding-left: 0.75rem;
+  margin: 1rem 0;
+}
+
+.caption {
+  font-size: 0.8rem;
+  color: var(--sidebar-text);
+  opacity: 0.85;
+  line-height: 1.4;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.caption a {
+  border-bottom: 1px dotted var(--main-divider);
+}
+
+.caption a:hover {
+  border-bottom-color: var(--main-link-hover);
+}
+
+footer {
+  margin-top: 3rem;
+  font-size: 0.85rem;
+  color: var(--sidebar-text);
+  border-top: 1px solid var(--main-divider);
+  padding-top: 1rem;
+}
+
+/* ================================
+   CODE
+==================================*/
+code,
+kbd,
+samp {
+  font-family: 'JuliaMono', monospace;
+  font-size: 0.95em;
+  background: var(--sidebar-bg);
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+pre {
+  font-family: 'JuliaMono', monospace;
+  font-size: 0.95em;
+  background: var(--sidebar-bg);
+  padding: 10px 12px;
+  border-radius: 6px;
+  overflow-x: auto;
+}
+
+/* ================================
+   RESPONSIVE
+==================================*/
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    max-width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--main-divider);
+  }
+
+  .content {
+    padding: 1rem;
+  }
+
+  header h1 {
+    font-size: 1.4rem;
+  }
+
+  nav a {
+    margin-right: 0.75rem;
+  }
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
