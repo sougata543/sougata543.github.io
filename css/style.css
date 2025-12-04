@@ -68,23 +68,43 @@ a:visited {
 }
 
 /* HEADER */
+
+header {
+  text-align: center;          /* center everything inside header */
+  margin-bottom: 2rem;
+}
+
 header h1 {
   margin: 0;
   font-size: 2rem;
   font-family: 'IBM Plex Sans', Arial, sans-serif;
   padding-bottom: 0.3rem;
   border-bottom: 1px solid var(--main-divider);
+  display: inline-block;       /* keeps underline tight around the name */
+}
+
+/* Bengali name styling */
+.bengali {
+  font-family: 'Noto Serif Bengali', serif;
+  font-weight: 400;
+  font-size: 0.9em;
+  margin-left: 0.4em;
 }
 
 header nav {
   margin-top: 0.75rem;
 }
 
+nav {
+  text-align: center;          /* center the links */
+}
+
 nav a {
-  margin-right: 1rem;
+  margin: 0 0.5rem;
   font-weight: bold;
   font-family: 'IBM Plex Sans', Arial, sans-serif;
 }
+
 
 /* TEXT ELEMENTS */
 h1, h2, h3, h4, h5, h6 {
