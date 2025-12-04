@@ -72,11 +72,20 @@ a:visited {
 header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;   /* nav sits slightly lower than the name */
+  align-items: center;   /* <-- ALIGN PERFECTLY */
   margin-bottom: 2.5rem;
   padding-top: 1.2rem;
 }
 
+
+/* header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;   
+  margin-bottom: 2.5rem;
+  padding-top: 1.2rem;
+}
+*/
 header h1 {
   margin: 0;
   font-size: 2rem;
