@@ -20,166 +20,285 @@
   font-display: swap;
 }
 
-/* LIGHT THEME VARIABLES */
-:root {
-  --body-bg: #FFFFFF;
-  --body-text: #333333;
-
-  --header-bg: #d5d5d5;
-  --main-divider: #aaaaaa;
-
-  --main-link: #880808;
-  --main-link-hover: #aa5522;
+/* ─── THEMES ─────────────────────────────────────────── */
+body.light {
+  --bg:           #ffffff;
+  --text-body:    #1a1a18;
+  --border:       #e0ddd8;
+  --border-faint: #eeeeee;
+  --accent:       #7a1515;
+  --accent-hover: #a0401a;
+  --heading:      #606058;
+  --name:         #1a1a18;
+  --bengali:      #bbbbbb;
+  --nav:          #aaaaaa;
+  --code-bg:      #f2f0ec;
+  --code-text:    #3a2a10;
+  --footer:       #cccccc;
+  --toggle-bg:    #f0ede8;
+  --toggle-border:#dddddd;
+  --toggle-text:  #999999;
+  --owl:          rgba(0, 0, 0, 0.07);
 }
 
-/* GENERAL PAGE */
+body.dark {
+  --bg:           #141412;
+  --text-body:    #b0aca4;
+  --border:       #2a2825;
+  --border-faint: #222018;
+  --accent:       #7aaa8a;
+  --accent-hover: #9dc8ad;
+  --heading:      #606058;
+  --name:         #e8e4dc;
+  --bengali:      #4a4845;
+  --nav:          #5a5850;
+  --code-bg:      #1e1c18;
+  --code-text:    #7aaa8a;
+  --footer:       #3a3830;
+  --toggle-bg:    #1e1c18;
+  --toggle-border:#2e2c28;
+  --toggle-text:  #5a5850;
+  --owl:          rgba(255, 255, 255, 0.06);
+}
+
+/* ─── RESET ──────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ─── BASE ───────────────────────────────────────────── */
+html { font-size: 18px; }
+
 body {
-  font-family: 'Merriweather', 'Noto Serif Bengali', serif;
-  background: var(--body-bg);
-  color: var(--body-text);
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
+  font-family: 'EB Garamond', Georgia, serif;
+  background: var(--bg);
+  color: var(--text-body);
+  line-height: 1.75;
+  padding: 0 1.25rem;
+  transition: background 0.2s, color 0.2s;
 }
 
-/* MAIN CONTENT AREA (no sidebar) */
+/* ─── LAYOUT ─────────────────────────────────────────── */
 .content {
-  max-width: 850px;
+  max-width: 720px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2.2rem 0 4rem;
+  position: relative;
+  overflow: hidden;
 }
 
-/* LINKS */
-a,
-a:link {
-  color: var(--main-link);
-  text-decoration: none;
-  transition: color 0.2s ease;
+/* ─── OWL BACKGROUND ─────────────────────────────────── */
+.owl-bg {
+  position: absolute;
+  right: -18px;
+  bottom: -12px;
+  width: 220px;
+  height: 280px;
+  pointer-events: none;
+  z-index: 0;
 }
 
-a:hover {
-  color: var(--main-link-hover);
-  text-decoration: underline;
+.owl-bg path,
+.owl-bg circle,
+.owl-bg ellipse,
+.owl-bg line {
+  stroke: var(--owl);
+  transition: stroke 0.2s;
 }
 
-/* visited links: SAME color, no violet */
-a:visited {
-  color: var(--main-link);
-}
-
-/* HEADER */
-
+/* ─── HEADER ─────────────────────────────────────────── */
 header {
   display: flex;
   justify-content: space-between;
-  align-items: center;   /* <-- ALIGN PERFECTLY */
-  margin-bottom: 2.5rem;
-  padding-top: 1.2rem;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  padding-bottom: 1.1rem;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  z-index: 1;
 }
 
-
-/* header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;   
-  margin-bottom: 2.5rem;
-  padding-top: 1.2rem;
-}
-*/
 header h1 {
-  margin: 0;
-  font-size: 2rem;
   font-family: 'IBM Plex Sans', Arial, sans-serif;
   font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--name);
+  letter-spacing: -0.01em;
+  margin: 0;
 }
 
-/* Bengali part of name */
 .bengali {
   font-family: 'Noto Serif Bengali', serif;
   font-weight: 400;
-  font-size: 0.9em;
+  font-size: 0.84em;
+  color: var(--bengali);
   margin-left: 0.4em;
 }
 
-/* Navigation on the right */
 header nav {
-  margin: 0;
-  padding: 0;
+  margin-top: 5px;
+  display: flex;
+  gap: 1.3rem;
 }
 
 header nav a {
-  margin-left: 1.2rem;
+  font-family: 'IBM Plex Sans', Arial, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 400;
+  color: var(--nav);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+header nav a:hover { color: var(--accent); }
+
+/* ─── THEME TOGGLE ───────────────────────────────────── */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--toggle-bg);
+  border: 0.5px solid var(--toggle-border);
+  border-radius: 20px;
+  padding: 3px 5px 3px 8px;
+  cursor: pointer;
+  user-select: none;
+  flex-shrink: 0;
+  margin-left: 1rem;
+  align-self: flex-start;
+  margin-top: 2px;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.theme-toggle span {
+  font-family: 'IBM Plex Sans', Arial, sans-serif;
+  font-size: 0.68rem;
+  color: var(--toggle-text);
+  letter-spacing: 0.04em;
+}
+
+.theme-toggle-pip {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--heading);
+  opacity: 0.5;
+}
+
+/* ─── MAIN ───────────────────────────────────────────── */
+main {
+  position: relative;
+  z-index: 1;
+}
+
+/* ─── HEADINGS ───────────────────────────────────────── */
+h2 {
   font-family: 'IBM Plex Sans', Arial, sans-serif;
   font-weight: 500;
-  text-decoration: none;
-  color: var(--main-link);
+  font-size: 0.72rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--heading);
+  margin: 1.8rem 0 0.7rem;
 }
 
-header nav a:hover {
-  text-decoration: underline;
-}
-
-/* ===========================
-   MOBILE BEHAVIOR
-=========================== */
-@media (max-width: 720px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  header nav {
-    margin-top: 0.6rem;
-  }
-
-  header nav a {
-    margin-left: 0;
-    margin-right: 1rem;
-  }
-}
-
-
-/* TEXT ELEMENTS */
-h1, h2, h3, h4, h5, h6 {
+h3 {
   font-family: 'IBM Plex Sans', Arial, sans-serif;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--name);
+  margin: 1.2rem 0 0.4rem;
+}
+
+/* ─── BODY TEXT ──────────────────────────────────────── */
+p { font-size: 1rem; margin-bottom: 0.75rem; }
+
+ul, ol { padding-left: 1.3rem; margin-bottom: 0.75rem; }
+li { margin-bottom: 0.25rem; font-size: 1rem; }
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border-faint);
+  margin: 1.6rem 0;
 }
 
 blockquote {
+  border-left: 2px solid var(--border);
+  padding-left: 1rem;
+  color: var(--nav);
   font-style: italic;
-  font-size: 0.9rem;
-  border-left: 3px solid var(--main-divider);
-  padding-left: 0.75rem;
-  color: #666;
+  font-size: 0.95rem;
+  margin: 1.2rem 0;
 }
 
-/* CODE */
+/* ─── LINKS ──────────────────────────────────────────── */
+a, a:link, a:visited {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+/* ─── CODE ───────────────────────────────────────────── */
 code, kbd, samp {
-  font-family: 'JuliaMono', monospace;
-  background: #f1f1f1;
-  padding: 2px 4px;
-  border-radius: 4px;
+  font-family: 'JuliaMono', 'Fira Mono', monospace;
+  font-size: 0.8em;
+  background: var(--code-bg);
+  padding: 1px 5px;
+  border-radius: 3px;
+  color: var(--code-text);
 }
 
 pre {
-  font-family: 'JuliaMono', monospace;
-  background: #f1f1f1;
-  padding: 10px 12px;
-  border-radius: 6px;
+  font-family: 'JuliaMono', 'Fira Mono', monospace;
+  font-size: 0.80em;
+  background: var(--code-bg);
+  padding: 1rem 1.2rem;
+  border-radius: 4px;
   overflow-x: auto;
+  line-height: 1.6;
+  margin: 1.2rem 0;
+  border: 1px solid var(--border);
 }
 
-/* FOOTER */
-footer {
-  margin-top: 3rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--main-divider);
-  color: #666;
-  font-size: 0.85rem;
-  text-align: center;
+pre code {
+  background: none;
+  padding: 0;
+  font-size: inherit;
+  color: inherit;
 }
 
+/* ─── IMAGES ─────────────────────────────────────────── */
 img, video {
   max-width: 100%;
   height: auto;
+  display: block;
+  margin: 1.5rem auto;
 }
 
+/* ─── FOOTER ─────────────────────────────────────────── */
+footer {
+  margin-top: 2.4rem;
+  font-family: 'IBM Plex Sans', Arial, sans-serif;
+  font-size: 0.72rem;
+  color: var(--footer);
+  letter-spacing: 0.03em;
+  position: relative;
+  z-index: 1;
+}
+
+/* ─── MOBILE ─────────────────────────────────────────── */
+@media (max-width: 640px) {
+  html { font-size: 16px; }
+
+  header {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  header nav { gap: 1rem; }
+
+  .theme-toggle { margin-left: 0; margin-top: 0.5rem; }
+}
