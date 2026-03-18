@@ -65,7 +65,7 @@ body.dark {
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 /* ─── BASE ───────────────────────────────────────────── */
-html { font-size: 18px; }
+html { font-size: 21px; }
 
 body {
   font-family: 'EB Garamond', Georgia, serif;
