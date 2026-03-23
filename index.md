@@ -23,8 +23,6 @@ Inline code in JuliaMono: `x^2 + y^2 = something I dont care`
 
 ## Contact
 
-**Email:**
-
 - `first_name.last_name@outlook.com` 
 
 
