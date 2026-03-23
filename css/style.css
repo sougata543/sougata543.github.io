@@ -68,7 +68,7 @@ body.dark {
 html { font-size: 21px; }
 
 body {
-  font-family: 'EB Garamond', Georgia, serif;
+  font-family: 'IBM Plex Sans', Georgia, sans-serif;
   background: var(--bg);
   color: var(--text-body);
   line-height: 1.75;
@@ -192,12 +192,12 @@ main {
 /* ─── HEADINGS ───────────────────────────────────────── */
 h2 {
   font-family: 'IBM Plex Sans', Arial, sans-serif;
-  font-weight: 500;
-  font-size: 0.72rem;
-  letter-spacing: 0.09em;
+  font-weight: 600;
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--heading);
-  margin: 1.8rem 0 0.7rem;
+  margin: 1.8rem 0 0.065rem;
 }
 
 h3 {

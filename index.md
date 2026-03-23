@@ -26,7 +26,5 @@ Inline code in JuliaMono: `x^2 + y^2 = something I dont care`
 **Email:**
 
 - `first_name.last_name@outlook.com` 
-- `sougatap[at]cmi[dot]ac[dot]in`  
 
-**GitHub:** [`sougata543`](https://github.com/sougata543)
 
