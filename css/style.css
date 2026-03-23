@@ -193,8 +193,8 @@ main {
 h2 {
   font-family: 'IBM Plex Sans', Arial, sans-serif;
   font-weight: 600;
-  font-size: 0.68rem;
-  letter-spacing: 0.06em;
+  font-size: 0.80rem;
+  letter-spacing: 0.07em;
   text-transform: uppercase;
   color: var(--heading);
   margin: 1.8rem 0 0.065rem;
