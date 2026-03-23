@@ -86,7 +86,6 @@ body {
 }
 
 /* ─── OWL BACKGROUND ─────────────────────────────────── */
-/*
 .owl-bg {
   position: absolute;
   right: -18px;
@@ -104,7 +103,6 @@ body {
   stroke: var(--owl);
   transition: stroke 0.2s;
 }
-*/
 /* ─── HEADER ─────────────────────────────────────────── */
 header {
   display: flex;
