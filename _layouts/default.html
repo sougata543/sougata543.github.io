@@ -18,7 +18,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Noto+Serif+Bengali:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400;1,700&family=IBM+Plex+Sans:wght@400;500;600&family=Noto+Serif+Bengali:wght@400;700&display=swap" rel="stylesheet">
 
 
   <!--new icon -->
@@ -121,11 +121,11 @@
       var icon = document.getElementById('toggle-icon');
       if (body.classList.contains('dark')) {
         body.classList.replace('dark', 'light');
-        icon.textContent = 'dark_mode';
+        icon.textContent = 'light_mode';
         localStorage.setItem('theme', 'light');
       } else {
         body.classList.replace('light', 'dark');
-        icon.textContent = 'light_mode';
+        icon.textContent = 'dark_mode';
         localStorage.setItem('theme', 'dark');
       }
     }
@@ -134,7 +134,7 @@
       var saved = localStorage.getItem('theme') || 'dark';
       document.body.className = saved;
       var icon = document.getElementById('toggle-icon');
-      if (icon) icon.textContent = saved === 'dark' ? 'light_mode' : 'dark_mode';
+      if (icon) icon.textContent = saved === 'dark' ? 'dark_mode' : 'light_mode';
     })();
   </script>
 
