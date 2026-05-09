@@ -128,8 +128,8 @@ title: Archive
       <tr>
         <td>Fourier Analysis</td>
         <td><div class="doc-links">
-          <a href="Archive/MMath/sem3/Fourier Analysis/midsem_26.pdf">midsem</a>
-          <a href="Archive/MMath/sem3/Fourier Analysis/endsem_26.pdf">endsem</a>
+          <a href="Archive/MMath/sem3/Fourier Analysis/midsem_25.pdf">midsem</a>
+          <a href="Archive/MMath/sem3/Fourier Analysis/endsem_25.pdf">endsem</a>
         </div></td>
       </tr>
       <tr>
