@@ -4,7 +4,6 @@ title: Archive
 ---
 
 <style>
-  /* ── semester toggle button ── */
   .sem-toggle {
     background: none;
     border: none;
@@ -32,7 +31,6 @@ title: Archive
 
   .sem-toggle.open .arrow { transform: rotate(90deg); }
 
-  /* ── collapsible content ── */
   .sem-content {
     display: none;
     padding-left: 0.1rem;
@@ -41,19 +39,13 @@ title: Archive
 
   .sem-content.open { display: block; }
 
-  /* ── subject table ── */
   .subject-table {
     width: 100%;
     border-collapse: collapse;
   }
 
-  .subject-table tr {
-    border-bottom: 1px solid var(--border);
-  }
-
-  .subject-table tr:last-child {
-    border-bottom: none;
-  }
+  .subject-table tr { border-bottom: 1px solid var(--border); }
+  .subject-table tr:last-child { border-bottom: none; }
 
   .subject-table td {
     padding: 0.35rem 0.5rem 0.35rem 0;
@@ -68,11 +60,7 @@ title: Archive
     padding-right: 1rem;
   }
 
-  /* ── doc links ── */
-  .doc-links {
-    display: flex;
-    gap: 0.75rem;
-  }
+  .doc-links { display: flex; gap: 0.75rem; }
 
   .doc-links a {
     font-family: 'JuliaMono', 'Fira Mono', monospace;
@@ -83,149 +71,91 @@ title: Archive
     transition: color 0.15s;
   }
 
-  .doc-links a:hover {
-    color: var(--accent);
-    text-decoration: none;
-  }
+  .doc-links a:hover { color: var(--accent); }
 </style>
 
 ## MMath
 
-<button class="sem-toggle" onclick="toggleSem(this)">
-  <span class="arrow">▶</span> Semester 3
+<div class="sem-block">
+<button class="sem-toggle" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
+  <span class="arrow">&#9658;</span> Semester 3
 </button>
 <div class="sem-content">
-  <table class="subject-table">
-    <tbody>
-      <tr>
-        <td>Probability Theory</td>
-        <td><div class="doc-links">
-          <a href="Archive/MMath/sem3/Probability Theory/midsem_26.pdf">midsem</a>
-          <a href="Archive/MMath/sem3/Probability Theory/endsem_26.pdf">endsem</a>
-        </div></td>
-      </tr>
-      <tr>
-        <td>Differential Geometry</td>
-        <td><div class="doc-links">
-          <a href="Archive/MMath/sem3/Differential Geometry/midsem_26.pdf">midsem</a>
-          <a href="Archive/MMath/sem3/Differential Geometry/endsem_26.pdf">endsem</a>
-        </div></td>
-      </tr>
-      <tr>
-        <td>Riemann Surfaces</td>
-        <td><div class="doc-links">
-          <a href="Archive/MMath/sem3/Riemann Surfaces/midsem_26.pdf">midsem</a>
-          <a href="Archive/MMath/sem3/Riemann Surfaces/endsem_26.pdf">endsem</a>
-        </div></td>
-      </tr>
-      <tr>
-        <td>Modular Forms</td>
-        <td><div class="doc-links">
-          <a href="Archive/MMath/sem3/Modular Forms/midsem_26.pdf">midsem</a>
-          <a href="Archive/MMath/sem3/Modular Forms/endsem_26.pdf">endsem</a>
-        </div></td>
-      </tr>
-      <tr>
-        <td>Fourier Analysis</td>
-        <td><div class="doc-links">
-          <a href="Archive/MMath/sem3/Fourier Analysis/midsem_25.pdf">midsem</a>
-          <a href="Archive/MMath/sem3/Fourier Analysis/endsem_25.pdf">endsem</a>
-        </div></td>
-      </tr>
-      <tr>
-        <td>Commutative Algebra I</td>
-        <td><div class="doc-links">
-          <a href="Archive/MMath/sem3/Commutative Algebra I/midsem_26.pdf">midsem</a>
-          <a href="Archive/MMath/sem3/Commutative Algebra I/endsem_26.pdf">endsem</a>
-        </div></td>
-      </tr>
-      <tr>
-        <td>Topology III</td>
-        <td><div class="doc-links">
-          <a href="Archive/MMath/sem3/Topology III/midsem_26.pdf">midsem</a>
-          <a href="Archive/MMath/sem3/Topology III/endsem_26.pdf">endsem</a>
-        </div></td>
-      </tr>
-    </tbody>
-  </table>
+<table class="subject-table"><tbody>
+<tr><td>Probability Theory</td><td><div class="doc-links">
+  <a href="Archive/MMath/sem3/Probability Theory/midsem_25.pdf">midsem</a>
+  <a href="Archive/MMath/sem3/Probability Theory/endsem_25.pdf">endsem</a>
+</div></td></tr>
+<tr><td>Differential Geometry</td><td><div class="doc-links">
+  <a href="Archive/MMath/sem3/Differential Geometry/midsem_25.pdf">midsem</a>
+  <a href="Archive/MMath/sem3/Differential Geometry/endsem_25.pdf">endsem</a>
+</div></td></tr>
+<tr><td>Riemann Surfaces</td><td><div class="doc-links">
+  <a href="Archive/MMath/sem3/Riemann Surfaces/midsem_25.pdf">midsem</a>
+  <a href="Archive/MMath/sem3/Riemann Surfaces/endsem_25.pdf">endsem</a>
+</div></td></tr>
+<tr><td>Modular Forms</td><td><div class="doc-links">
+  <a href="Archive/MMath/sem3/Modular Forms/midsem_25.pdf">midsem</a>
+  <a href="Archive/MMath/sem3/Modular Forms/endsem_25.pdf">endsem</a>
+</div></td></tr>
+<tr><td>Fourier Analysis</td><td><div class="doc-links">
+  <a href="Archive/MMath/sem3/Fourier Analysis/midsem_25.pdf">midsem</a>
+  <a href="Archive/MMath/sem3/Fourier Analysis/endsem_25.pdf">endsem</a>
+</div></td></tr>
+<tr><td>Commutative Algebra I</td><td><div class="doc-links">
+  <a href="Archive/MMath/sem3/Commutative Algebra I/midsem_25.pdf">midsem</a>
+  <a href="Archive/MMath/sem3/Commutative Algebra I/endsem_25.pdf">endsem</a>
+</div></td></tr>
+<tr><td>Topology III</td><td><div class="doc-links">
+  <a href="Archive/MMath/sem3/Topology III/midsem_25.pdf">midsem</a>
+  <a href="Archive/MMath/sem3/Topology III/endsem_25.pdf">endsem</a>
+</div></td></tr>
+</tbody></table>
+</div>
 </div>
 
-<button class="sem-toggle" onclick="toggleSem(this)">
-  <span class="arrow">▶</span> Semester 4
+<div class="sem-block">
+<button class="sem-toggle" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
+  <span class="arrow">&#9658;</span> Semester 4
 </button>
 <div class="sem-content">
-  <table class="subject-table">
-    <tbody>
-      <tr>
-        <td>Partial Differential Equations</td>
-        <td><div class="doc-links">
-          <a href="Archive/MMath/sem4/Partial Differential Equations/midsem_26.pdf">midsem</a>
-          <a href="Archive/MMath/sem4/Partial Differential Equations/endsem_26.pdf">endsem</a>
-        </div></td>
-      </tr>
-      <tr>
-        <td>Algebraic Number Theory</td>
-        <td><div class="doc-links">
-          <a href="Archive/MMath/sem4/Algebraic Number Theory/midsem_26.pdf">midsem</a>
-          <a href="Archive/MMath/sem4/Algebraic Number Theory/endsem_26.pdf">endsem</a>
-        </div></td>
-      </tr>
-      <tr>
-        <td>Algebraic Geometry</td>
-        <td><div class="doc-links">
-          <a href="Archive/MMath/sem4/Algebraic Geometry/midsem_26.pdf">midsem</a>
-          <a href="Archive/MMath/sem4/Algebraic Geometry/endsem_26.pdf">endsem</a>
-        </div></td>
-      </tr>
-      <tr>
-        <td>Analysis on Lie Groups</td>
-        <td><div class="doc-links">
-          <a href="Archive/MMath/sem4/Analysis on Lie Groups/midsem_26.pdf">midsem</a>
-          <a href="Archive/MMath/sem4/Analysis on Lie Groups/endsem_26.pdf">endsem</a>
-        </div></td>
-      </tr>
-      <tr>
-        <td>Rational Homotopy Theory</td>
-        <td><div class="doc-links">
-          <a href="Archive/MMath/sem4/Rational Homotopy Theory/midsem_26.pdf">midsem</a>
-          <a href="Archive/MMath/sem4/Rational Homotopy Theory/endsem_26.pdf">endsem</a>
-        </div></td>
-      </tr>
-      <tr>
-        <td>Symplectic Geometry</td>
-        <td><div class="doc-links">
-          <a href="Archive/MMath/sem4/Symplectic Geometry/midsem_26.pdf">midsem</a>
-          <a href="Archive/MMath/sem4/Symplectic Geometry/endsem_26.pdf">endsem</a>
-        </div></td>
-      </tr>
-      <tr>
-        <td>Advanced Functional Analysis</td>
-        <td><div class="doc-links">
-          <a href="Archive/MMath/sem4/Advanced Functional Analysis/midsem_26.pdf">midsem</a>
-          <a href="Archive/MMath/sem4/Advanced Functional Analysis/endsem_26.pdf">endsem</a>
-        </div></td>
-      </tr>
-      <tr>
-        <td>Teichmüller Theory</td>
-        <td><div class="doc-links">
-          <a href="Archive/MMath/sem4/Teichmüller Theory/midsem_26.pdf">midsem</a>
-          <a href="Archive/MMath/sem4/Teichmüller Theory/endsem_26.pdf">endsem</a>
-        </div></td>
-      </tr>
-      <tr>
-        <td>Commutative Algebra II</td>
-        <td><div class="doc-links">
-          <a href="Archive/MMath/sem4/Commutative Algebra II/midsem_26.pdf">midsem</a>
-          <a href="Archive/MMath/sem4/Commutative Algebra II/endsem_26.pdf">endsem</a>
-        </div></td>
-      </tr>
-    </tbody>
-  </table>
+<table class="subject-table"><tbody>
+<tr><td>Partial Differential Equations</td><td><div class="doc-links">
+  <a href="Archive/MMath/sem4/Partial Differential Equations/midsem_26.pdf">midsem</a>
+  <a href="Archive/MMath/sem4/Partial Differential Equations/endsem_26.pdf">endsem</a>
+</div></td></tr>
+<tr><td>Algebraic Number Theory</td><td><div class="doc-links">
+  <a href="Archive/MMath/sem4/Algebraic Number Theory/midsem_26.pdf">midsem</a>
+  <a href="Archive/MMath/sem4/Algebraic Number Theory/endsem_26.pdf">endsem</a>
+</div></td></tr>
+<tr><td>Algebraic Geometry</td><td><div class="doc-links">
+  <a href="Archive/MMath/sem4/Algebraic Geometry/midsem_26.pdf">midsem</a>
+  <a href="Archive/MMath/sem4/Algebraic Geometry/endsem_26.pdf">endsem</a>
+</div></td></tr>
+<tr><td>Analysis on Lie Groups</td><td><div class="doc-links">
+  <a href="Archive/MMath/sem4/Analysis on Lie Groups/midsem_26.pdf">midsem</a>
+  <a href="Archive/MMath/sem4/Analysis on Lie Groups/endsem_26.pdf">endsem</a>
+</div></td></tr>
+<tr><td>Rational Homotopy Theory</td><td><div class="doc-links">
+  <a href="Archive/MMath/sem4/Rational Homotopy Theory/midsem_26.pdf">midsem</a>
+  <a href="Archive/MMath/sem4/Rational Homotopy Theory/endsem_26.pdf">endsem</a>
+</div></td></tr>
+<tr><td>Symplectic Geometry</td><td><div class="doc-links">
+  <a href="Archive/MMath/sem4/Symplectic Geometry/midsem_26.pdf">midsem</a>
+  <a href="Archive/MMath/sem4/Symplectic Geometry/endsem_26.pdf">endsem</a>
+</div></td></tr>
+<tr><td>Advanced Functional Analysis</td><td><div class="doc-links">
+  <a href="Archive/MMath/sem4/Advanced Functional Analysis/midsem_26.pdf">midsem</a>
+  <a href="Archive/MMath/sem4/Advanced Functional Analysis/endsem_26.pdf">endsem</a>
+</div></td></tr>
+<tr><td>Teichmüller Theory</td><td><div class="doc-links">
+  <a href="Archive/MMath/sem4/Teichmüller Theory/midsem_26.pdf">midsem</a>
+  <a href="Archive/MMath/sem4/Teichmüller Theory/endsem_26.pdf">endsem</a>
+</div></td></tr>
+<tr><td>Commutative Algebra II</td><td><div class="doc-links">
+  <a href="Archive/MMath/sem4/Commutative Algebra II/midsem_26.pdf">midsem</a>
+  <a href="Archive/MMath/sem4/Commutative Algebra II/endsem_26.pdf">endsem</a>
+</div></td></tr>
+</tbody></table>
 </div>
-
-<script>
-function toggleSem(btn) {
-  btn.classList.toggle('open');
-  btn.nextElementSibling.classList.toggle('open');
-}
-</script>
+</div>
