@@ -23,10 +23,11 @@ title: Archive
   .sem-toggle:hover { color: var(--accent); }
 
   .sem-toggle .arrow {
-    font-size: 0.55rem;
-    color: var(--text-muted);
+    font-size: 0.7rem;
+    color: var(--text);
     transition: transform 0.18s ease;
     display: inline-block;
+    opacity: 0.5;
   }
 
   .sem-toggle.open .arrow { transform: rotate(90deg); }
