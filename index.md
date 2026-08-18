@@ -4,8 +4,7 @@ title: Home
 
 ## About
 
-I am a PhD student in mathematics at [INSTITUTION](https://example.edu), advised by
-[ADVISOR](https://example.edu/~advisor). I work on RESEARCH AREA.
+I am a first-year graduate student in mathematics at [Indian Statistical Institute, Bangalore](https://www.isibang.ac.in/).
 
 Before this I completed an MMath at the
 [Indian Statistical Institute, Kolkata](https://www.isical.ac.in/), and a BSc in
@@ -13,14 +12,14 @@ Mathematics and Computer Science at the
 [Chennai Mathematical Institute](https://www.cmi.ac.in/).
 
 ## Research interests
-
-ONE OR TWO SENTENCES, or a short list — enough that someone in a
-neighbouring field can tell what you think about.
+I am broadly interested in Number theory, Harmonic analysis and Representation Theory.
 
 ## Contact
 
 - `first_name.last_name@outlook.com`
-- Office: ROOM, BUILDING
+-`rs_math2603[at]isibang[dot]ac[dot]in`
+
+<!-- Office: ROOM, BUILDING -->
 
 <!-- Uncomment a section as you have something to put in it.
 
