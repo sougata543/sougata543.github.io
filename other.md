@@ -42,7 +42,7 @@ title: Others
 
 ## Things I like
 
-Reading novels and manga, watching films and anime, folding origami. The usual slow pleasures.
+Reading novels and manga, watching films and anime, folding origami.
 
 <img class="spiral-bg" src="images/background_spiral.png" alt="">
 <!-- <span class="spiral-caption">~(>_<)~</span> -->
