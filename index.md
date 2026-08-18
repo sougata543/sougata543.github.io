@@ -1,5 +1,6 @@
 ---
 title: Home
+description: Personal website of Saugata Panda, a PhD student in Mathematics at the Indian Statistical Institute, Bangalore.
 ---
 
 ## About
