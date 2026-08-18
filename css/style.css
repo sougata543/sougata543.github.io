@@ -1,3 +1,6 @@
+/* ─── LOCAL FONTS ────────────────────────────────────────
+   Lazy: only fetched if a rule actually uses JuliaMono.
+──────────────────────────────────────────────────────────── */
 @font-face {
   font-family: 'JuliaMono';
   src: url('../fonts/JuliaMono-Regular.woff2') format('woff2');
@@ -22,47 +25,68 @@
 
 /* ─── SPACING SCALE ──────────────────────────────────────
    xs: 0.4rem  |  sm: 0.75rem  |  md: 1.25rem  |  lg: 2rem
-─────────────────────────────────────────────────────────── */
+──────────────────────────────────────────────────────────── */
 
-/* ─── LIGHT THEME ────────────────────────────────────── */
-body.light {
+/* ─── COLOUR SYSTEM ──────────────────────────────────────
+   One hue, ~220° (deep blue). Backgrounds stay white / near
+   black; every other value is a shade of that single blue,
+   so nothing on the page is a second colour decision.
+
+   ink      #0d1b33   deep blue, near-black      (light text)
+   slate    #33415c   mid blue-grey              (light body)
+   haze     #7b879c   desaturated blue           (muted)
+   navy     #1b3a7a   deep blue                  (light accent)
+   azure    #2f57ad   deep blue, lifted          (light hover)
+   sky      #7ea6e8   deep blue, tinted for dark (dark accent)
+──────────────────────────────────────────────────────────── */
+html.light {
+  color-scheme: light;
   --bg:           #ffffff;
-  --bg-subtle:    #f5f4f1;
-  --border:       #e0ddd8;
-  --text:         #1a1a18;
-  --text-body:    #3a3a36;
-  --text-muted:   #999994;
-  --accent:       #7a1515;
-  --accent-hover: #a0401a;
-  --owl:          rgba(0, 0, 0, 0.06);
+  --bg-subtle:    #f3f6fb;
+  --border:       #dbe2ee;
+  --text:         #0d1b33;
+  --text-body:    #33415c;
+  --text-muted:   #7b879c;
+  --accent:       #1b3a7a;
+  --accent-hover: #2f57ad;
 }
 
-/* ─── DARK THEME ─────────────────────────────────────── */
-body.dark {
-  --bg:           #141412;
-  --bg-subtle:    #1c1b18;
-  --border:       #2e2b27;
-  --text:         #e4e0d8;
-  --text-body:    #a8a49c;
-  --text-muted:   #5a5750;
-  --accent:       #7aaa8a;
-  --accent-hover: #9dc8ad;
-  --owl:          rgba(255, 255, 255, 0.055);
+html.dark {
+  color-scheme: dark;
+  --bg:           #0a0e16;
+  --bg-subtle:    #131a27;
+  --border:       #232d40;
+  --text:         #e5eaf3;
+  --text-body:    #a6b1c4;
+  --text-muted:   #6b7789;
+  --accent:       #7ea6e8;
+  --accent-hover: #a6c4f4;
 }
 
 /* ─── RESET ──────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 /* ─── BASE ───────────────────────────────────────────── */
-html { font-size: 21px; }
+html {
+  font-size: 21px;
+  background: var(--bg);
+  -webkit-text-size-adjust: 100%;
+}
 
 body {
-  font-family: 'IBM Plex Sans', Arial, sans-serif;
+  font-family: 'IBM Plex Sans', system-ui, sans-serif;
   background: var(--bg);
   color: var(--text-body);
   line-height: 1.7;
   padding: 0 1.25rem;
-  transition: background 0.2s, color 0.2s;
+}
+
+::selection { background: var(--accent); color: var(--bg); }
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
 }
 
 /* ─── LAYOUT ─────────────────────────────────────────── */
@@ -70,27 +94,6 @@ body {
   max-width: 680px;
   margin: 0 auto;
   padding: 2rem 0 4rem;
-  position: relative;
-  overflow: hidden;
-}
-
-/* ─── OWL BACKGROUND ─────────────────────────────────── */
-.owl-bg {
-  position: absolute;
-  right: -18px;
-  bottom: -12px;
-  width: 220px;
-  height: 280px;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.owl-bg path,
-.owl-bg circle,
-.owl-bg ellipse,
-.owl-bg line {
-  stroke: var(--owl);
-  transition: stroke 0.2s;
 }
 
 /* ─── HEADER ─────────────────────────────────────────── */
@@ -98,11 +101,10 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  gap: 1.25rem;
   padding-bottom: 1.25rem;
   margin-bottom: 1.25rem;
   border-bottom: 1px solid var(--border);
-  position: relative;
-  z-index: 1;
 }
 
 header h1 {
@@ -110,7 +112,6 @@ header h1 {
   font-size: 1rem;
   color: var(--text);
   letter-spacing: -0.01em;
-  margin: 0;
   line-height: 1.4;
 }
 
@@ -125,44 +126,49 @@ header h1 {
 header nav {
   margin-top: 0.3rem;
   display: flex;
+  flex-wrap: wrap;
   gap: 1.25rem;
 }
 
 header nav a {
   font-size: 0.75rem;
-  font-weight: 400;
   color: var(--text-muted);
   text-decoration: none;
   transition: color 0.15s;
 }
 
 header nav a:hover { color: var(--accent); }
+header nav a[aria-current="page"] { color: var(--text); }
 
 /* ─── THEME TOGGLE ───────────────────────────────────── */
 .theme-toggle {
-  cursor: pointer;
-  user-select: none;
   flex-shrink: 0;
-  margin-left: 1.25rem;
-  align-self: flex-start;
-  margin-top: 0.05rem;
+  margin-top: 0.15rem;
+  background: none;
+  border: none;
+  padding: 0;
+  line-height: 0;
+  cursor: pointer;
   color: var(--accent);
   transition: color 0.15s;
 }
 
 .theme-toggle:hover { color: var(--accent-hover); }
 
-.theme-toggle .material-symbols-outlined {
-  font-size: 1.4rem;
+.theme-toggle svg {
   display: block;
+  width: 1.1rem;
+  height: 1.1rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
-
-/* ─── MAIN ───────────────────────────────────────────── */
-main {
-  position: relative;
-  z-index: 1;
-}
+/* Show the theme you'd switch *to*. */
+html.dark  .icon-moon { display: none; }
+html.light .icon-sun  { display: none; }
 
 /* ─── HEADINGS ───────────────────────────────────────── */
 h2 {
@@ -171,8 +177,10 @@ h2 {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--text-muted);
-  margin: 1.25rem 0 0.75rem;
+  margin: 2rem 0 0.75rem;
 }
+
+main > h2:first-child { margin-top: 1.25rem; }
 
 h3 {
   font-weight: 500;
@@ -185,7 +193,6 @@ h3 {
 p {
   font-size: 0.9rem;
   font-weight: 300;
-  color: var(--text-body);
   margin-bottom: 0.75rem;
 }
 
@@ -208,7 +215,7 @@ blockquote {
 }
 
 /* ─── LINKS ──────────────────────────────────────────── */
-a, a:link, a:visited {
+a {
   color: var(--accent);
   text-decoration: none;
   transition: color 0.15s;
@@ -234,11 +241,11 @@ pre {
   font-size: 0.75em;
   background: var(--bg-subtle);
   padding: 1.25rem;
+  border: 1px solid var(--border);
   border-radius: 4px;
   overflow-x: auto;
   line-height: 1.6;
   margin: 1.25rem 0;
-  border: 1px solid var(--border);
 }
 
 pre code {
@@ -256,27 +263,94 @@ img, video {
   margin: 1.25rem auto;
 }
 
+/* ─── ARCHIVE ────────────────────────────────────────────
+   Collapsible semesters use native <details>: no JS, works
+   with keyboard and with scripting off.
+──────────────────────────────────────────────────────────── */
+.sem { margin: 1.25rem 0; }
+
+.sem > summary {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  list-style: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text);
+  transition: color 0.15s;
+}
+
+.sem > summary::-webkit-details-marker { display: none; }
+
+.sem > summary::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 0.32em solid currentColor;
+  border-top: 0.22em solid transparent;
+  border-bottom: 0.22em solid transparent;
+  opacity: 0.45;
+  transition: transform 0.18s ease;
+}
+
+.sem[open] > summary::before { transform: rotate(90deg); }
+.sem > summary:hover { color: var(--accent); }
+
+.subject-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.4rem;
+}
+
+.subject-table tr { border-bottom: 1px solid var(--border); }
+.subject-table tr:last-child { border-bottom: none; }
+
+.subject-table td {
+  padding: 0.35rem 0.5rem 0.35rem 0;
+  vertical-align: middle;
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--text-body);
+}
+
+.subject-table td:first-child {
+  width: 62%;
+  padding-right: 1rem;
+}
+
+.doc-links { display: flex; gap: 0.75rem; }
+
+.doc-links a {
+  font-family: 'JuliaMono', 'Fira Mono', monospace;
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  letter-spacing: 0.03em;
+}
+
+.doc-links a:hover { color: var(--accent); text-decoration: none; }
+
 /* ─── FOOTER ─────────────────────────────────────────── */
 footer {
   margin-top: 2rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
   font-size: 0.7rem;
   font-weight: 300;
   color: var(--text-muted);
   letter-spacing: 0.04em;
-  position: relative;
-  z-index: 1;
 }
 
 /* ─── MOBILE ─────────────────────────────────────────── */
 @media (max-width: 640px) {
   html { font-size: 17px; }
 
-  header {
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-
   header nav { gap: 1rem; }
+}
 
-  .theme-toggle { margin-left: 0; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
 }

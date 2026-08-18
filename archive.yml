@@ -1,0 +1,30 @@
+# Exam archive. Add a semester or a course here; mmath.md
+# builds the tables and the PDF links from this file.
+#
+#   PDF path = /Archive/MMath/<path>/<course>/<midsem|endsem>_<year>.pdf
+
+- label: Semester 3
+  path: sem3
+  year: "25"
+  courses:
+    - Probability Theory
+    - Differential Geometry
+    - Riemann Surfaces
+    - Modular Forms
+    - Fourier Analysis
+    - Commutative Algebra I
+    - Topology III
+
+- label: Semester 4
+  path: sem4
+  year: "26"
+  courses:
+    - Partial Differential Equations
+    - Algebraic Number Theory
+    - Algebraic Geometry
+    - Analysis on Lie Groups
+    - Rational Homotopy Theory
+    - Symplectic Geometry
+    - Advanced Functional Analysis
+    - Teichmüller Theory
+    - Commutative Algebra II

@@ -1,109 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ site.lang | default: 'en' }}" class="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }}</title>
+
+  <!-- Theme: set before the stylesheet is applied, so no flash. -->
+  <script>
+    function toggleTheme() {
+      var root = document.documentElement;
+      var next = root.classList.contains('dark') ? 'light' : 'dark';
+      root.className = next;
+      try { localStorage.setItem('theme', next); } catch (e) {}
+    }
+    (function () {
+      try {
+        document.documentElement.className = localStorage.getItem('theme') || 'dark';
+      } catch (e) {}
+    })();
+  </script>
 
   {% seo %}
   {% feed_meta %}
 
   <link rel="stylesheet" href="{{ '/css/style.css' | relative_url }}">
 
-  <!-- Preload local fonts -->
-  <link rel="preload" href="{{ '/fonts/JuliaMono-Regular.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="{{ '/fonts/JuliaMono-Bold.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="{{ '/fonts/JuliaMono-RegularItalic.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
-
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400;1,700&family=IBM+Plex+Sans:wght@400;500;600&family=Noto+Serif+Bengali:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&display=swap">
+  <!-- Bengali subset: only the glyphs in the site name. -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@400&text=%E0%A6%B8%E0%A7%8C%E0%A6%97%E0%A6%A4%20%E0%A6%AA%E0%A6%A3%E0%A7%8D%E0%A6%A1%E0%A6%BE&display=swap">
 
-
-  <!--new icon -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=dark_mode,light_mode" />
-<style>
-  .material-symbols-outlined {
-    font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
-  }
-</style>
-
-  <!-- MathJax -->
+  {% if page.math %}
   <script>
     window.MathJax = {
       tex: {
         inlineMath: [['$', '$'], ['\\(', '\\)']],
         displayMath: [['$$', '$$'], ['\\[', '\\]']]
       },
-      options: {
-        skipHtmlTags: ['script','noscript','style','textarea','pre']
-      }
+      options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'] }
     };
   </script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
-  <!-- Theme: apply saved preference before render to avoid flash -->
-  <script>
-    (function() {
-      var theme = localStorage.getItem('theme') || 'dark';
-      document.documentElement.className = theme;
-    })();
-  </script>
+  {% endif %}
 </head>
 
-<body class="dark">
-
+<body>
   <div class="content">
-
-    <!-- Owl background SVG -->
-  <!--  <svg class="owl-bg" viewBox="0 0 220 280" fill="none" xmlns="http://www.w3.org/2000/svg"
-         stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M110 240 C75 240 52 215 50 185 C48 155 58 125 70 108 C80 94 90 88 110 86 C130 88 140 94 150 108 C162 125 172 155 170 185 C168 215 145 240 110 240 Z"/>
-      <path d="M70 108 C58 112 42 120 32 135 C22 150 20 170 28 185 C36 200 50 185 50 185"/>
-      <path d="M60 118 C50 128 40 142 36 158"/>
-      <path d="M55 130 C47 142 42 158 42 172"/>
-      <path d="M52 148 C48 160 48 175 50 185"/>
-      <path d="M150 108 C162 112 178 120 188 135 C198 150 200 170 192 185 C184 200 170 185 170 185"/>
-      <path d="M160 118 C170 128 180 142 184 158"/>
-      <path d="M165 130 C173 142 178 158 178 172"/>
-      <path d="M168 148 C172 160 172 175 170 185"/>
-      <circle cx="90" cy="115" r="20"/>
-      <circle cx="90" cy="115" r="9"/>
-      <circle cx="94" cy="110" r="3" stroke-width="1"/>
-      <circle cx="130" cy="115" r="20"/>
-      <circle cx="130" cy="115" r="9"/>
-      <circle cx="134" cy="110" r="3" stroke-width="1"/>
-      <path d="M76 98 C80 88 86 82 90 78"/>
-      <path d="M82 95 C84 85 88 79 91 75"/>
-      <path d="M144 98 C140 88 134 82 130 78"/>
-      <path d="M138 95 C136 85 132 79 129 75"/>
-      <path d="M104 128 C108 136 112 138 116 136 C120 134 116 128 110 126 C104 124 104 128 104 128 Z"/>
-      <path d="M68 105 C72 90 82 78 90 74 C98 70 110 68 110 68 C110 68 122 70 130 74 C138 78 148 90 152 105"/>
-      <path d="M68 105 C65 118 65 130 68 142"/>
-      <path d="M152 105 C155 118 155 130 152 142"/>
-      <path d="M80 160 C90 155 100 158 110 155 C120 152 130 155 140 160"/>
-      <path d="M76 175 C88 168 100 172 110 169 C120 166 132 169 144 175"/>
-      <path d="M78 190 C90 183 102 186 110 184 C118 182 130 184 142 190"/>
-      <path d="M82 205 C92 200 102 202 110 200 C118 198 128 200 138 205"/>
-      <path d="M88 220 C96 216 104 218 110 216 C116 214 124 216 132 220"/>
-      <path d="M90 240 C88 250 84 256 78 260"/>
-      <path d="M90 240 C90 252 88 258 86 264"/>
-      <path d="M90 240 C92 252 94 258 96 264"/>
-      <path d="M130 240 C132 250 136 256 142 260"/>
-      <path d="M130 240 C130 252 132 258 134 264"/>
-      <path d="M130 240 C128 252 126 258 124 264"/>
-      <path d="M40 266 C70 262 100 264 110 264 C120 264 150 262 180 266" stroke-width="2"/>
-      <path d="M65 264 C67 260 66 256 68 258"/>
-      <path d="M85 263 C84 259 86 255 85 257"/>
-      <path d="M135 263 C136 259 134 255 135 257"/>
-      <path d="M155 264 C157 260 156 256 158 258"/>
-      <path d="M88 238 C84 248 80 256 76 268"/>
-      <path d="M98 240 C96 252 95 260 94 270"/>
-      <path d="M122 240 C124 252 125 260 126 270"/>
-      <path d="M132 238 C136 248 140 256 144 268"/>
-    </svg>-->
-
     {% include header.html %}
 
     <main>
@@ -111,32 +53,6 @@
     </main>
 
     {% include footer.html %}
-
   </div>
-
-  <!-- Theme toggle script -->
-  <script>
-    function toggleTheme() {
-      var body = document.body;
-      var icon = document.getElementById('toggle-icon');
-      if (body.classList.contains('dark')) {
-        body.classList.replace('dark', 'light');
-        icon.textContent = 'light_mode';
-        localStorage.setItem('theme', 'light');
-      } else {
-        body.classList.replace('light', 'dark');
-        icon.textContent = 'dark_mode';
-        localStorage.setItem('theme', 'dark');
-      }
-    }
-
-    (function() {
-      var saved = localStorage.getItem('theme') || 'dark';
-      document.body.className = saved;
-      var icon = document.getElementById('toggle-icon');
-      if (icon) icon.textContent = saved === 'dark' ? 'dark_mode' : 'light_mode';
-    })();
-  </script>
-
 </body>
 </html>
