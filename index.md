@@ -7,10 +7,10 @@ title: Home
 <!-- {% if page.photo %}<img class="portrait" src="{{ page.photo | relative_url }}" alt="{{ site.author }}">{% endif %}
 -->
 
-I am a PhD student at [Indian Statistical Institute, Bangalore](https://www.isibang.ac.in/).
+I am a first year PhD student at [Indian Statistical Institute, Bangalore](https://www.isibang.ac.in/).
 
 Previously I completed MMath from the
-[Indian Statistical Institute, Kolkata](https://www.isical.ac.in/), and a BSc in
+[Indian Statistical Institute, Kolkata](https://www.isical.ac.in/). I did my BSc in
 Mathematics and Computer Science from the
 [Chennai Mathematical Institute](https://www.cmi.ac.in/).
 
