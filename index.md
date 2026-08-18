@@ -17,7 +17,7 @@ I am broadly interested in Number theory, Harmonic analysis and Representation T
 ## Contact
 
 - `first_name.last_name@outlook.com`
--`rs_math2603[at]isibang[dot]ac[dot]in`
+- `rs_math2603[at]isibang[dot]ac[dot]in`
 
 <!-- Office: ROOM, BUILDING -->
 
