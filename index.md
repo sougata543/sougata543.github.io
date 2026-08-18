@@ -18,28 +18,4 @@ Mathematics and Computer Science from the
 
 ## Contact
 
-<!-- - `first_name.last_name@outlook.com` -->
 - `rs_math2603[at]isibang[dot]ac[dot]in`
-
-<!-- Office: ROOM, BUILDING -->
-
-<!-- Uncomment a section as you have something to put in it.
-
-## Preprints
-
-1. **Title of the paper**, with [Coauthor](https://example.edu).
-   [arXiv:0000.00000](https://arxiv.org/abs/0000.00000)
-
-## Talks
-
-- **Title of talk.** Seminar, Institution, Month Year.
-
-## Teaching
-
-- **Course code — Course name.** Teaching assistant, Term Year.
-
-## Notes
-
-- [Title](/notes/title.pdf) — one line on what it covers.
-
--->
