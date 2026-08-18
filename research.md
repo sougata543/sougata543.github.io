@@ -2,5 +2,9 @@
 layout: default
 title: Writings
 ---
-*Nothing here yet.* 
+## Research interests
+I am broadly interested in Number theory, Harmonic analysis and Representation Theory.
+
+## Papers
+Trying... (ง'̀-'́)ง 
 

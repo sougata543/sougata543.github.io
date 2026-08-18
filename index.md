@@ -4,19 +4,20 @@ title: Home
 
 ## About
 
-I am a first-year graduate student in mathematics at [Indian Statistical Institute, Bangalore](https://www.isibang.ac.in/).
+<!-- {% if page.photo %}<img class="portrait" src="{{ page.photo | relative_url }}" alt="{{ site.author }}">{% endif %}
+-->
 
-Before this I completed an MMath at the
+I am a PhD student at [Indian Statistical Institute, Bangalore](https://www.isibang.ac.in/).
+
+Previously I completed MMath from the
 [Indian Statistical Institute, Kolkata](https://www.isical.ac.in/), and a BSc in
-Mathematics and Computer Science at the
+Mathematics and Computer Science from the
 [Chennai Mathematical Institute](https://www.cmi.ac.in/).
 
-## Research interests
-I am broadly interested in Number theory, Harmonic analysis and Representation Theory.
 
 ## Contact
 
-- `first_name.last_name@outlook.com`
+<!-- - `first_name.last_name@outlook.com` -->
 - `rs_math2603[at]isibang[dot]ac[dot]in`
 
 <!-- Office: ROOM, BUILDING -->
