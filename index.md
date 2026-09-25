@@ -1,5 +1,5 @@
 ---
-title: Home
+title: Sougata Panda
 description: Personal webpage of Sougata Panda, a PhD student in Mathematics at the Indian Statistical Institute, Bangalore.
 ---
 
