@@ -28,41 +28,43 @@
 ──────────────────────────────────────────────────────────── */
 
 /* ─── COLOUR SYSTEM ──────────────────────────────────────
-   One hue, ~220° (deep blue). Backgrounds stay white / near
-   black; every other value is a shade of that single blue,
-   so nothing on the page is a second colour decision.
+   One hue, ~220° (blue). Light mode is a cool paper grey with
+   deep ink-blue type; dark mode is a navy-slate with soft,
+   lifted blues. Lightness steps mirror each other across the
+   two modes, and every text colour clears WCAG AA (4.5:1) on
+   both --bg and --bg-subtle.
 
-   ink      #0d1b33   deep blue, near-black      (light text)
-   slate    #33415c   mid blue-grey              (light body)
-   haze     #7b879c   desaturated blue           (muted)
-   navy     #1b3a7a   deep blue                  (light accent)
-   azure    #2f57ad   deep blue, lifted          (light hover)
-   sky      #7ea6e8   deep blue, tinted for dark (dark accent)
+   Contrast on --bg (light / dark):
+     --text        16.1 / 14.3   headings
+     --text-body    9.8 /  8.7   paragraphs (AAA)
+     --text-muted   5.8 /  5.4   nav, labels, footer
+     --accent       8.0 /  7.3   links
+     --accent-hover 5.8 / 10.2   hover state
 ──────────────────────────────────────────────────────────── */
 html.light {
   color-scheme: light;
-  --bg:           #ffffff;
-  --bg-subtle:    #f3f6fb;
-  --border:       #dbe2ee;
-  --text:         #0d1b33;
-  --text-body:    #33415c;
-  --text-muted:   #7b879c;
-  --accent:       #1c44a0;
-  --accent-hover: #2f63cc;
-  --accent-faint: #a8bce0;
+  --bg:           #f1f3f6;
+  --bg-subtle:    #e2e6ee;
+  --border:       #c6cddc;
+  --text:         #0d172b;
+  --text-body:    #313d54;
+  --text-muted:   #555e72;
+  --accent:       #1c449c;
+  --accent-hover: #2658c5;
+  --accent-faint: #97acd8;
 }
 
 html.dark {
   color-scheme: dark;
-  --bg:           #0a0e16;
-  --bg-subtle:    #131a27;
-  --border:       #232d40;
-  --text:         #e5eaf3;
-  --text-body:    #a6b1c4;
-  --text-muted:   #6b7789;
-  --accent:       #7ea6e8;
-  --accent-hover: #a6c4f4;
-  --accent-faint: #3f5b86;
+  --bg:           #151a23;
+  --bg-subtle:    #1d2330;
+  --border:       #30394b;
+  --text:         #e4e9f1;
+  --text-body:    #afb8ca;
+  --text-muted:   #868fa2;
+  --accent:       #7ea8f1;
+  --accent-hover: #aac7f8;
+  --accent-faint: #3f5883;
 }
 
 /* ─── RESET ──────────────────────────────────────────── */
