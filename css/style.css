@@ -286,6 +286,9 @@ img, video {
   border-radius: 2px;
 }
 
+/* Dim the photo slightly in dark mode so it doesn't glare. */
+html.dark .portrait { filter: brightness(0.9) contrast(1.05); }
+
 /* Keep later sections from wrapping around a tall photo. */
 h2 { clear: both; }
 
