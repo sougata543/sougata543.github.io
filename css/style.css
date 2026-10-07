@@ -28,33 +28,34 @@
 ──────────────────────────────────────────────────────────── */
 
 /* ─── COLOUR SYSTEM ──────────────────────────────────────
-   Light mode uses crisp pure white and ink black (Merlin).
-   Dark mode uses deep shadow blacks and bright gold (The Fool).
+   "The Magician" Theme.
+   Light Mode: Clean, soft paper white with Deep Crimson Red highlights.
+   Dark Mode: Deep shadow slate with glowing Golden Yellow highlights.
 ──────────────────────────────────────────────────────────── */
 html.light {
   color-scheme: light;
-  --bg:           #ffffff;
-  --bg-subtle:    #f4f4f4;
-  --border:       #e0e0e0;
-  --text:         #000000;
-  --text-body:    #2b2b2b;
-  --text-muted:   #6b6b6b;
-  --accent:       #000000;
-  --accent-hover: #666666;
-  --accent-faint: #d4d4d4;
+  --bg:           #faf9f6; /* Soft, clean paper white */
+  --bg-subtle:    #f0ece4; 
+  --border:       #dcd5c9;
+  --text:         #1a1918; /* Crisp dark ink */
+  --text-body:    #363431;
+  --text-muted:   #6e6a65;
+  --accent:       #9b2226; /* Deep Magician's Crimson */
+  --accent-hover: #c4292e;
+  --accent-faint: #dfb2b3;
 }
 
 html.dark {
   color-scheme: dark;
-  --bg:           #141311;
-  --bg-subtle:    #1f1d1a;
-  --border:       #38332a;
-  --text:         #f2ebd9;
-  --text-body:    #cdc4b1;
-  --text-muted:   #948c7c;
-  --accent:       #f5cc47;
-  --accent-hover: #fce895;
-  --accent-faint: #594d24;
+  --bg:           #121417; /* True dark shadow */
+  --bg-subtle:    #1d2025;
+  --border:       #31353d;
+  --text:         #ecebea; /* Clear, bright off-white */
+  --text-body:    #c4c2bf;
+  --text-muted:   #8f8b86;
+  --accent:       #eebd53; /* Glowing Golden Yellow */
+  --accent-hover: #f4d588;
+  --accent-faint: #5c4716;
 }
 
 /* ─── RESET ──────────────────────────────────────────── */
@@ -203,9 +204,9 @@ hr {
 }
 
 blockquote {
-  border-left: 2px solid var(--border);
+  border-left: 2px solid var(--accent);
   padding-left: 1.25rem;
-  color: var(--text-muted);
+  color: var(--text-body);
   font-style: italic;
   font-size: 0.9rem;
   margin: 1.25rem 0;
@@ -296,7 +297,7 @@ img, video {
   width: 100%;
   margin: 0;
   border: 1px solid var(--border);
-  border-radius: 3px;
+  border-radius: 4px;
 }
 
 .photo-col figcaption,
@@ -307,6 +308,7 @@ img, video {
   line-height: 1.5;
 }
 
+/* Dim photos slightly in dark mode so they don't glare */
 html.dark .photo-col img,
 html.dark .inline-photo img { filter: brightness(0.9) contrast(1.05); }
 
@@ -314,7 +316,7 @@ h2 { clear: both; }
 
 /* ─── PHOTOS INSIDE THE TEXT (other pages) ─────────────── */
 .inline-photo { margin: 1.25rem 0; }
-.inline-photo img { margin: 0; border: 1px solid var(--border); border-radius: 3px; }
+.inline-photo img { margin: 0; border: 1px solid var(--border); border-radius: 4px; }
 .inline-photo.right { float: right; width: 38%; margin: 0.3rem 0 1rem 2rem; }
 .inline-photo.left  { float: left;  width: 38%; margin: 0.3rem 2rem 1rem 0; }
 .inline-photo.wide  { width: 100%; }
@@ -429,3 +431,4 @@ footer {
     animation-duration: 0.01ms !important;
   }
 }
+```[cite: 3]
