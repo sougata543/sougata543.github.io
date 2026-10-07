@@ -48,9 +48,18 @@
   <div class="content">
     {% include header.html %}
 
-    <main>
-      {{ content }}
-    </main>
+    <div class="layout{% if page.photo %} has-photo{% if page.photo_side == 'left' %} photo-left{% endif %}{% endif %}">
+      <main>
+        {{ content }}
+      </main>
+
+      {% if page.photo %}
+      <figure class="photo-col">
+        <img src="{{ page.photo | relative_url }}" alt="{{ page.photo_alt | default: site.author }}">
+        {% if page.photo_caption %}<figcaption>{{ page.photo_caption }}</figcaption>{% endif %}
+      </figure>
+      {% endif %}
+    </div>
 
     {% include footer.html %}
   </div>

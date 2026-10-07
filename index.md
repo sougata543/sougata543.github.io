@@ -1,13 +1,11 @@
 ---
 title: Home
 description: Personal webpage of Sougata Panda, a PhD student in Mathematics at the Indian Statistical Institute, Bangalore.
-# photo: images/profile-p.png
+photo: images/merlin-hermes.jpg
+photo_alt: Merlin Hermes
 ---
 
 ## About
-
-<!-- {% if page.photo %}<img class="portrait" src="{{ page.photo | relative_url }}" alt="{{ site.author }}">{% endif %}
--->
 
 I am a first year PhD student at the [Indian Statistical Institute, Bangalore](https://www.isibang.ac.in/).
 
