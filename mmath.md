@@ -1,5 +1,6 @@
 ---
 title: Archive
+photo: images/FMAB.jpg
 ---
 
 ## MMath
