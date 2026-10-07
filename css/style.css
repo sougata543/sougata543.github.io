@@ -28,43 +28,34 @@
 ──────────────────────────────────────────────────────────── */
 
 /* ─── COLOUR SYSTEM ──────────────────────────────────────
-   One hue, ~220° (blue). Light mode is a cool paper grey with
-   deep ink-blue type; dark mode is a navy-slate with soft,
-   lifted blues. Lightness steps mirror each other across the
-   two modes, and every text colour clears WCAG AA (4.5:1) on
-   both --bg and --bg-subtle.
-
-   Contrast on --bg (light / dark):
-     --text        16.1 / 14.3   headings
-     --text-body    9.8 /  8.7   paragraphs (AAA)
-     --text-muted   5.8 /  5.4   nav, labels, footer
-     --accent       8.0 /  7.3   links
-     --accent-hover 5.8 / 10.2   hover state
+   Updated for "The Fool" Theme. 
+   Light mode uses antique parchment and muted bronze.
+   Dark mode uses deep shadow blacks and bright gold/yellow.
 ──────────────────────────────────────────────────────────── */
 html.light {
   color-scheme: light;
-  --bg:           #f1f3f6;
-  --bg-subtle:    #e2e6ee;
-  --border:       #c6cddc;
-  --text:         #0d172b;
-  --text-body:    #26314a;
-  --text-muted:   #555e72;
-  --accent:       #1c449c;
-  --accent-hover: #2658c5;
-  --accent-faint: #97acd8;
+  --bg:           #fbfaf7;
+  --bg-subtle:    #f0ece1;
+  --border:       #dcd4c3;
+  --text:         #1c1a17;
+  --text-body:    #3a3630;
+  --text-muted:   #6b645a;
+  --accent:       #b38b22;
+  --accent-hover: #8f6e18;
+  --accent-faint: #e0d1a4;
 }
 
 html.dark {
   color-scheme: dark;
-  --bg:           #151a23;
-  --bg-subtle:    #1d2330;
-  --border:       #30394b;
-  --text:         #e4e9f1;
-  --text-body:    #c3cbdb;
-  --text-muted:   #9aa3b6;
-  --accent:       #7ea8f1;
-  --accent-hover: #aac7f8;
-  --accent-faint: #3f5883;
+  --bg:           #141311;
+  --bg-subtle:    #1f1d1a;
+  --border:       #38332a;
+  --text:         #f2ebd9;
+  --text-body:    #cdc4b1;
+  --text-muted:   #948c7c;
+  --accent:       #f5cc47;
+  --accent-hover: #fce895;
+  --accent-faint: #594d24;
 }
 
 /* ─── RESET ──────────────────────────────────────────── */
@@ -175,7 +166,6 @@ header nav a[aria-current="page"] { color: var(--text); }
   stroke-linejoin: round;
 }
 
-/* Show the theme you'd switch *to*. */
 html.dark  .icon-moon { display: none; }
 html.light .icon-sun  { display: none; }
 
@@ -231,8 +221,6 @@ a {
 
 a:hover { color: var(--accent-hover); }
 
-/* Body-copy links carry a standing underline; navigation and the
-   archive's file links are already unambiguous in context. */
 main a {
   text-decoration: underline;
   text-decoration-thickness: 1px;
@@ -281,13 +269,7 @@ img, video {
   margin: 1.25rem auto;
 }
 
-/* ─── SPLIT LAYOUT ───────────────────────────────────────
-   Any page with `photo:` in its front matter gets text on one
-   side and the photo on the other. Optional front matter:
-     photo_side: left      (default: right)
-     photo_alt:  "..."
-     photo_caption: "..."
-──────────────────────────────────────────────────────────── */
+/* ─── SPLIT LAYOUT ─────────────────────────────────────── */
 .layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
@@ -326,27 +308,19 @@ img, video {
   line-height: 1.5;
 }
 
-/* Dim photos slightly in dark mode so they don't glare. */
 html.dark .photo-col img,
 html.dark .inline-photo img { filter: brightness(0.9) contrast(1.05); }
 
-/* Keep later sections from wrapping around floated photos. */
 h2 { clear: both; }
 
-/* ─── PHOTOS INSIDE THE TEXT (other pages) ───────────────
-   <figure class="inline-photo right"> <img src="..." alt="..."> </figure>
-   Use class "left", "right", or "wide" (full width).
-──────────────────────────────────────────────────────────── */
+/* ─── PHOTOS INSIDE THE TEXT (other pages) ─────────────── */
 .inline-photo { margin: 1.25rem 0; }
 .inline-photo img { margin: 0; border: 1px solid var(--border); border-radius: 3px; }
 .inline-photo.right { float: right; width: 38%; margin: 0.3rem 0 1rem 2rem; }
 .inline-photo.left  { float: left;  width: 38%; margin: 0.3rem 2rem 1rem 0; }
 .inline-photo.wide  { width: 100%; }
 
-/* ─── ARCHIVE ────────────────────────────────────────────
-   Collapsible semesters use native <details>: no JS, works
-   with keyboard and with scripting off.
-──────────────────────────────────────────────────────────── */
+/* ─── ARCHIVE ──────────────────────────────────────────── */
 .sem { margin: 1.25rem 0; }
 
 .sem > summary {
@@ -419,10 +393,7 @@ footer {
   letter-spacing: 0.04em;
 }
 
-/* ─── VIEWPORT STEPS ─────────────────────────────────────
-   The column widens in two steps so the line length stays
-   readable instead of just stretching to fill the glass.
-──────────────────────────────────────────────────────────── */
+/* ─── VIEWPORT STEPS ───────────────────────────────────── */
 @media (min-width: 1024px) {
   .content { max-width: 1180px; }
 }
@@ -440,7 +411,6 @@ footer {
   .layout.has-photo,
   .layout.has-photo.photo-left { grid-template-columns: minmax(0, 1fr); }
 
-  /* photo first on phones, kept modest so text isn't pushed far down */
   .photo-col,
   .layout.photo-left .photo-col {
     order: -1;
