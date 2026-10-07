@@ -28,21 +28,20 @@
 ──────────────────────────────────────────────────────────── */
 
 /* ─── COLOUR SYSTEM ──────────────────────────────────────
-   Updated for "The Fool" Theme. 
-   Light mode uses antique parchment and muted bronze.
-   Dark mode uses deep shadow blacks and bright gold/yellow.
+   Light mode uses crisp pure white and ink black (Merlin).
+   Dark mode uses deep shadow blacks and bright gold (The Fool).
 ──────────────────────────────────────────────────────────── */
 html.light {
   color-scheme: light;
-  --bg:           #fbfaf7;
-  --bg-subtle:    #f0ece1;
-  --border:       #dcd4c3;
-  --text:         #1c1a17;
-  --text-body:    #3a3630;
-  --text-muted:   #6b645a;
-  --accent:       #b38b22;
-  --accent-hover: #8f6e18;
-  --accent-faint: #e0d1a4;
+  --bg:           #ffffff;
+  --bg-subtle:    #f4f4f4;
+  --border:       #e0e0e0;
+  --text:         #000000;
+  --text-body:    #2b2b2b;
+  --text-muted:   #6b6b6b;
+  --accent:       #000000;
+  --accent-hover: #666666;
+  --accent-faint: #d4d4d4;
 }
 
 html.dark {
@@ -278,11 +277,11 @@ img, video {
 }
 
 .layout.has-photo {
-  grid-template-columns: minmax(0, 1fr) minmax(280px, 38%);
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 30%);
 }
 
 .layout.has-photo.photo-left {
-  grid-template-columns: minmax(280px, 38%) minmax(0, 1fr);
+  grid-template-columns: minmax(240px, 30%) minmax(0, 1fr);
 }
 
 .layout.photo-left .photo-col { order: -1; }
@@ -415,9 +414,9 @@ footer {
   .layout.photo-left .photo-col {
     order: -1;
     position: static;
-    width: 68%;
-    max-width: 260px;
-    margin: 0.25rem auto 0;
+    width: 60%;
+    max-width: 220px;
+    margin: 0.25rem auto 1.5rem;
   }
 
   .inline-photo.left,
