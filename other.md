@@ -6,13 +6,20 @@ photo_alt: The Fool
 photo_caption: The Fool (Klein) from LOTM
 ---
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%" height="auto" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.5); margin-bottom: 2.5rem;">
+<style>
+  /* Hides the graphic completely when the light theme is active */
+  html.light .chant-graphic {
+    display: none;
+  }
+</style>
+
+<svg class="chant-graphic" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="100%" height="auto" style="margin-bottom: 2.5rem;">
   <defs>
-    <!-- Gray Fog Gradient -->
+    <!-- Gray Fog Gradient blending into Dark Mode Background -->
     <radialGradient id="fog" cx="50%" cy="50%" r="60%">
       <stop offset="0%" stop-color="#5a5a5a" stop-opacity="0.4"/>
-      <stop offset="60%" stop-color="#1a1a1a" stop-opacity="0.8"/>
-      <stop offset="100%" stop-color="#050505" stop-opacity="1"/>
+      <stop offset="60%" stop-color="#1a1a1a" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#121417" stop-opacity="1"/>
     </radialGradient>
     
     <!-- Golden Glow Filter -->
@@ -33,21 +40,11 @@ photo_caption: The Fool (Klein) from LOTM
         filter: url(#glow);
         letter-spacing: 2px;
       }
-      
-      .sub-text {
-        font-family: 'Metamorphous', serif;
-        fill: #948c7c;
-        font-size: 13px;
-        text-anchor: middle;
-        letter-spacing: 4px;
-        text-transform: uppercase;
-        opacity: 0.6;
-      }
     </style>
   </defs>
 
-  <!-- Background Base -->
-  <rect width="100%" height="100%" fill="#050505"/>
+  <!-- Background Base matching html.dark -->
+  <rect width="100%" height="100%" fill="#121417"/>
   
   <!-- The Gray Fog -->
   <rect width="100%" height="100%" fill="url(#fog)"/>
@@ -61,13 +58,11 @@ photo_caption: The Fool (Klein) from LOTM
   <circle cx="400" cy="200" r="160" fill="none" stroke="#b38b22" stroke-width="1.5" opacity="0.2" stroke-dasharray="12 6" />
   <circle cx="400" cy="200" r="150" fill="none" stroke="#f5cc47" stroke-width="0.5" opacity="0.1" />
 
-  <!-- The Incantation -->
-  <text x="400" y="160" class="hermes-text">The Fool that doesn't belong to this era,</text>
-  <text x="400" y="215" class="hermes-text">The mysterious ruler above the gray fog,</text>
-  <text x="400" y="270" class="hermes-text">The King of Yellow and Black who wields good luck.</text>
+  <!-- The Incantation (Centered) -->
+  <text x="400" y="175" class="hermes-text">The Fool that doesn't belong to this era,</text>
+  <text x="400" y="230" class="hermes-text">The mysterious ruler above the gray fog,</text>
+  <text x="400" y="285" class="hermes-text">The King of Yellow and Black who wields good luck.</text>
   
-  <!-- Aesthetic Subtitle -->
-  <text x="400" y="340" class="sub-text">~ Hermes Incantation ~</text>
 </svg>
 
 ## Things I like
