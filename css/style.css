@@ -28,34 +28,34 @@
 ──────────────────────────────────────────────────────────── */
 
 /* ─── COLOUR SYSTEM ──────────────────────────────────────
-   "The Magician" Theme.
-   Light Mode: Clean, soft paper white with Deep Crimson Red highlights.
-   Dark Mode: Deep shadow slate with glowing Golden Yellow highlights.
+   "Great Wave" / Serious Academic Theme.
+   Light mode uses the Merlin Hermes parchment (#dfdcc4) with Prussian Blue ink.
+   Dark mode uses deep ocean slate with soft seafoam blue highlights.
 ──────────────────────────────────────────────────────────── */
 html.light {
   color-scheme: light;
-  --bg:           #faf9f6; /* Soft, clean paper white */
-  --bg-subtle:    #f0ece4; 
-  --border:       #dcd5c9;
-  --text:         #1a1918; /* Crisp dark ink */
-  --text-body:    #363431;
-  --text-muted:   #6e6a65;
-  --accent:       #9b2226; /* Deep Magician's Crimson */
-  --accent-hover: #c4292e;
-  --accent-faint: #dfb2b3;
+  --bg:           #dfdcc4; /* Merlin Hermes parchment */
+  --bg-subtle:    #d0ceb6;
+  --border:       #bebc9f;
+  --text:         #15202b; /* Deep ocean ink */
+  --text-body:    #2c3a4a;
+  --text-muted:   #5b697b;
+  --accent:       #244b7f; /* Great Wave Prussian Blue */
+  --accent-hover: #16325c;
+  --accent-faint: #9baec7;
 }
 
 html.dark {
   color-scheme: dark;
-  --bg:           #121417; /* True dark shadow */
-  --bg-subtle:    #1d2025;
-  --border:       #31353d;
-  --text:         #ecebea; /* Clear, bright off-white */
-  --text-body:    #c4c2bf;
-  --text-muted:   #8f8b86;
-  --accent:       #eebd53; /* Glowing Golden Yellow */
-  --accent-hover: #f4d588;
-  --accent-faint: #5c4716;
+  --bg:           #10141e; /* Deep academic navy */
+  --bg-subtle:    #1a202c;
+  --border:       #2d3748;
+  --text:         #edf2f7; /* Crisp foam white */
+  --text-body:    #cbd5e0;
+  --text-muted:   #a0aec0;
+  --accent:       #82b1ff; /* Soft wave crest blue */
+  --accent-hover: #b3d4ff;
+  --accent-faint: #2c466b;
 }
 
 /* ─── RESET ──────────────────────────────────────────── */
@@ -308,7 +308,6 @@ img, video {
   line-height: 1.5;
 }
 
-/* Dim photos slightly in dark mode so they don't glare */
 html.dark .photo-col img,
 html.dark .inline-photo img { filter: brightness(0.9) contrast(1.05); }
 
@@ -431,4 +430,3 @@ footer {
     animation-duration: 0.01ms !important;
   }
 }
-```[cite: 3]
