@@ -37,4 +37,4 @@ title: Others
 
 Reading novels and manga, watching films and anime, folding origami.
 
-<img class="spiral-bg" src="images/background_spiral.jpg" alt="" aria-hidden="true">
+<img class="spiral-bg" src="images/background_spiral.png" alt="" aria-hidden="true">
