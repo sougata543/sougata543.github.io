@@ -28,34 +28,33 @@
 ──────────────────────────────────────────────────────────── */
 
 /* ─── COLOUR SYSTEM ──────────────────────────────────────
-   "Great Wave" / Serious Academic Theme.
-   Light mode uses the Merlin Hermes parchment (#dfdcc4) with Prussian Blue ink.
-   Dark mode uses deep ocean slate with soft seafoam blue highlights.
+   Light mode: Original cool paper grey and deep ink-blue.
+   Dark mode: Simplistic, classic dark slate with soft blue accents.
 ──────────────────────────────────────────────────────────── */
 html.light {
   color-scheme: light;
-  --bg:           #dfdcc4; /* Merlin Hermes parchment */
-  --bg-subtle:    #d0ceb6;
-  --border:       #bebc9f;
-  --text:         #15202b; /* Deep ocean ink */
-  --text-body:    #2c3a4a;
-  --text-muted:   #5b697b;
-  --accent:       #244b7f; /* Great Wave Prussian Blue */
-  --accent-hover: #16325c;
-  --accent-faint: #9baec7;
+  --bg:           #f1f3f6;
+  --bg-subtle:    #e2e6ee;
+  --border:       #c6cddc;
+  --text:         #0d172b;
+  --text-body:    #26314a;
+  --text-muted:   #555e72;
+  --accent:       #1c449c;
+  --accent-hover: #2658c5;
+  --accent-faint: #97acd8;
 }
 
 html.dark {
   color-scheme: dark;
-  --bg:           #10141e; /* Deep academic navy */
-  --bg-subtle:    #1a202c;
-  --border:       #2d3748;
-  --text:         #edf2f7; /* Crisp foam white */
-  --text-body:    #cbd5e0;
-  --text-muted:   #a0aec0;
-  --accent:       #82b1ff; /* Soft wave crest blue */
-  --accent-hover: #b3d4ff;
-  --accent-faint: #2c466b;
+  --bg:           #121212;
+  --bg-subtle:    #1e1e1e;
+  --border:       #333333;
+  --text:         #f5f5f5;
+  --text-body:    #cccccc;
+  --text-muted:   #888888;
+  --accent:       #60a5fa; 
+  --accent-hover: #93c5fd;
+  --accent-faint: #1e3a8a;
 }
 
 /* ─── RESET ──────────────────────────────────────────── */
@@ -204,9 +203,9 @@ hr {
 }
 
 blockquote {
-  border-left: 2px solid var(--accent);
+  border-left: 2px solid var(--border);
   padding-left: 1.25rem;
-  color: var(--text-body);
+  color: var(--text-muted);
   font-style: italic;
   font-size: 0.9rem;
   margin: 1.25rem 0;
@@ -297,7 +296,7 @@ img, video {
   width: 100%;
   margin: 0;
   border: 1px solid var(--border);
-  border-radius: 4px;
+  border-radius: 3px;
 }
 
 .photo-col figcaption,
@@ -315,7 +314,7 @@ h2 { clear: both; }
 
 /* ─── PHOTOS INSIDE THE TEXT (other pages) ─────────────── */
 .inline-photo { margin: 1.25rem 0; }
-.inline-photo img { margin: 0; border: 1px solid var(--border); border-radius: 4px; }
+.inline-photo img { margin: 0; border: 1px solid var(--border); border-radius: 3px; }
 .inline-photo.right { float: right; width: 38%; margin: 0.3rem 0 1rem 2rem; }
 .inline-photo.left  { float: left;  width: 38%; margin: 0.3rem 2rem 1rem 0; }
 .inline-photo.wide  { width: 100%; }
