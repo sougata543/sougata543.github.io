@@ -28,33 +28,33 @@
 ──────────────────────────────────────────────────────────── */
 
 /* ─── COLOUR SYSTEM ──────────────────────────────────────
-   Light mode: Original cool paper grey and deep ink-blue.
-   Dark mode: Simplistic, classic dark slate with soft blue accents.
+   Light Mode: Soft paper white with Deep Crimson Red highlights.
+   Dark Mode: Deep academic navy with soft wave crest blue highlights.
 ──────────────────────────────────────────────────────────── */
 html.light {
   color-scheme: light;
-  --bg:           #f1f3f6;
-  --bg-subtle:    #e2e6ee;
-  --border:       #c6cddc;
-  --text:         #0d172b;
-  --text-body:    #26314a;
-  --text-muted:   #555e72;
-  --accent:       #1c449c;
-  --accent-hover: #2658c5;
-  --accent-faint: #97acd8;
+  --bg:           #faf9f6; 
+  --bg-subtle:    #f0ece4; 
+  --border:       #dcd5c9;
+  --text:         #1a1918; 
+  --text-body:    #363431;
+  --text-muted:   #6e6a65;
+  --accent:       #9b2226; /* Deep Crimson */
+  --accent-hover: #c4292e;
+  --accent-faint: #dfb2b3;
 }
 
 html.dark {
   color-scheme: dark;
-  --bg:           #121212;
-  --bg-subtle:    #1e1e1e;
-  --border:       #333333;
-  --text:         #f5f5f5;
-  --text-body:    #cccccc;
-  --text-muted:   #888888;
-  --accent:       #60a5fa; 
-  --accent-hover: #93c5fd;
-  --accent-faint: #1e3a8a;
+  --bg:           #10141e; /* Deep academic navy */
+  --bg-subtle:    #1a202c;
+  --border:       #2d3748;
+  --text:         #edf2f7; 
+  --text-body:    #cbd5e0;
+  --text-muted:   #a0aec0;
+  --accent:       #82b1ff; /* Soft wave crest blue */
+  --accent-hover: #b3d4ff;
+  --accent-faint: #2c466b;
 }
 
 /* ─── RESET ──────────────────────────────────────────── */
@@ -203,9 +203,9 @@ hr {
 }
 
 blockquote {
-  border-left: 2px solid var(--border);
+  border-left: 2px solid var(--accent);
   padding-left: 1.25rem;
-  color: var(--text-muted);
+  color: var(--text-body);
   font-style: italic;
   font-size: 0.9rem;
   margin: 1.25rem 0;
@@ -296,7 +296,7 @@ img, video {
   width: 100%;
   margin: 0;
   border: 1px solid var(--border);
-  border-radius: 3px;
+  border-radius: 4px;
 }
 
 .photo-col figcaption,
@@ -314,7 +314,7 @@ h2 { clear: both; }
 
 /* ─── PHOTOS INSIDE THE TEXT (other pages) ─────────────── */
 .inline-photo { margin: 1.25rem 0; }
-.inline-photo img { margin: 0; border: 1px solid var(--border); border-radius: 3px; }
+.inline-photo img { margin: 0; border: 1px solid var(--border); border-radius: 4px; }
 .inline-photo.right { float: right; width: 38%; margin: 0.3rem 0 1rem 2rem; }
 .inline-photo.left  { float: left;  width: 38%; margin: 0.3rem 2rem 1rem 0; }
 .inline-photo.wide  { width: 100%; }
