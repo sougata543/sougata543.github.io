@@ -1,7 +1,7 @@
 ---
 title: Home
 description: Personal webpage of Sougata Panda, a PhD student in Mathematics at the Indian Statistical Institute, Bangalore.
-photo: images/merlin-hermes.jpg
+photo: images/merlin-hermes1.1.1.png
 photo_alt: Merlin Hermes
 photo_caption: Merlin Hermes from LOTM
 ---
