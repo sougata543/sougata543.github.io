@@ -5,7 +5,11 @@ photo: images/merlin-hermes1.1.1.png
 photo_alt: Merlin Hermes
 photo_caption: Merlin Hermes from LOTM
 ---
-
+<style>
+  .photo-col img {
+    border: none !important;
+  }
+</style>
 ## About
 
 I am a first year PhD student at the [Indian Statistical Institute, Bangalore](https://www.isibang.ac.in/).
