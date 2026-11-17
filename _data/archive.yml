@@ -1,7 +1,15 @@
 # Exam archive. Add a semester or a course here; mmath.md
-# builds the tables and the PDF links from this file.
-#
-#   PDF path = /Archive/MMath/<path>/<course>/<midsem|endsem>_<year>.pdf
+# builds the tables and PDF links from this file.
+# Entries without a program field belong to MMath; set program: PhD for PhD entries.
+# PDF paths: /Archive/<program>/<path>/<course>/<midsem|endsem>_<year>.pdf
+
+- label: Semester 1
+  program: PhD
+  path: sem1
+  year: "26"
+  courses:
+    - Representation Theory
+    - Lie Groups and Lie Algebras
 
 - label: Semester 3
   path: sem3
