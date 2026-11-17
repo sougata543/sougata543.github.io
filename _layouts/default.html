@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: 'en' }}" class="dark">
+<html lang="{{ site.lang | default: 'en' }}" class="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,13 +8,13 @@
   <script>
     function toggleTheme() {
       var root = document.documentElement;
-      var next = root.classList.contains('light') ? 'light' : 'dark';
+      var next = root.classList.contains('dark') ? 'light' : 'dark';
       root.className = next;
       try { localStorage.setItem('theme', next); } catch (e) {}
     }
     (function () {
       try {
-        document.documentElement.className = localStorage.getItem('theme') || 'dark';
+        document.documentElement.className = localStorage.getItem('theme') || 'light';
       } catch (e) {}
     })();
   </script>
