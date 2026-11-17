@@ -8,7 +8,7 @@
   <script>
     function toggleTheme() {
       var root = document.documentElement;
-      var next = root.classList.contains('dark') ? 'light' : 'dark';
+      var next = root.classList.contains('light') ? 'light' : 'dark';
       root.className = next;
       try { localStorage.setItem('theme', next); } catch (e) {}
     }
